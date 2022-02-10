@@ -1,0 +1,22 @@
+@import "variables";
+@import "mixins";
+
+
+.menu__item {
+  color: $dark50;
+  cursor: pointer;
+
+  &:not(:last-child){
+    margin-right: 20px;
+  }
+
+  &--active {
+    @include menu-bold
+  }
+}
+
+
+.link__item {
+  padding-left: 5px;
+}
+

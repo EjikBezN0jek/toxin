@@ -1,0 +1,6 @@
+@import "variables";
+
+@mixin menu-bold {
+  color: $dark75;
+  font-weight: $bold;
+}
