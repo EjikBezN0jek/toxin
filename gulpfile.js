@@ -43,7 +43,7 @@ function styleTask() {
 function serveTask() {
   browserSync.init({server: {baseDir: "build"}});
   gulp.watch('src/styles/*.scss', styleTask);
-  gulp.watch('src/script.js', copyTask).on('change', browserSync.reload);
+  gulp.watch('src/main.js', copyTask).on('change', browserSync.reload);
   gulp.watch('src/*.html', htmlTask).on('change', browserSync.reload);
   gulp.watch('src/img/', copyImgTask).on('change', browserSync.reload);
 }

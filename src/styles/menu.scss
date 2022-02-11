@@ -2,9 +2,12 @@
 @import "mixins";
 
 
+
 .menu__item {
   color: $dark50;
   cursor: pointer;
+  padding: 10px 0;
+
 
   &:not(:last-child){
     margin-right: 20px;
@@ -13,10 +16,44 @@
   &--active {
     @include menu-bold
   }
+
+  &:hover {
+    color: $dark100;
+  }
+
+  &--dropdown{
+    position: relative;
+
+    &:hover > .menu__dropdown {
+      display: block;
+    }
+  }
 }
 
 
 .link__item {
   padding-left: 5px;
+}
+
+
+.menu__dropdown {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  color: $dark50;
+
+
+  &-item {
+    padding: 10px 0;
+
+    &:hover {
+      color: $dark100;
+    }
+  }
 }
 

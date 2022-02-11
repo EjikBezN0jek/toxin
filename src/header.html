@@ -5,25 +5,44 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Toxin</title>
 </head>
 <body>
 <div class="header">
     <div class="header__container container">
-        <a href="./index.html" class="header__logo"><img src="./img/logo.svg" alt="logo" ></a>
+        <button type="button" class="burger btn"><i class="fas fa-solid fa-bars"></i></button>
+        <a href="./index.html" class="header__logo"><img src="./img/logo.svg" alt="logo"></a>
         <div class="header__menu menu">
             <a href="./index.html" class="menu__item link menu__item--active">О нас</a>
-            <a href="./catalog.html" class="menu__item link">Каталог
+            <a href="./catalog.html" class="menu__item link menu__item--dropdown">Каталог
                 <img src="./icons/expand_more.png" alt="" class="link__item">
+                <ul class="menu__dropdown">
+                    <li class="menu__dropdown-item">Lorem</li>
+                    <li class="menu__dropdown-item">Ipsum</li>
+                    <li class="menu__dropdown-item">Dolor</li>
+                    <li class="menu__dropdown-item">Sit</li>
+                    <li class="menu__dropdown-item">Amet</li>
+                </ul>
             </a>
             <a href="" class="menu__item link">Новости</a>
             <a href="" class="menu__item link">Вакансии</a>
-            <a href="" class="menu__item link">Соглашения
+            <a href="" class="menu__item link menu__item--dropdown">Соглашения
                 <img src="./icons/expand_more.png" alt="" class="link__item">
+                <ul class="menu__dropdown">
+                    <li class="menu__dropdown-item">Consectetur</li>
+                    <li class="menu__dropdown-item">Sit amet</li>
+                    <li class="menu__dropdown-item">Dolor</li>
+                    <li class="menu__dropdown-item">Ipsum</li>
+                    <li class="menu__dropdown-item">Lorem</li>
+                </ul>
             </a>
-            <a href="" class="menu__item btn--ghost btn link">Войти</a>
-            <a href="" class="menu__item btn link">Зарегистрироваться</a>
+        </div>
+        <a href="" class="login-btn"><i class="fas fa-solid fa-user"></i></a>
+        <div class="header__buttons">
+            <a href="" class="header__btn btn--ghost btn link">Войти</a>
+            <a href="" class="header__btn btn link">Зарегистрироваться</a>
         </div>
 
     </div>
