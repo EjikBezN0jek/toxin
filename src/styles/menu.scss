@@ -2,29 +2,20 @@
 @import "mixins";
 
 
-
 .menu__item {
-  color: $dark50;
+  display: block;
   cursor: pointer;
   padding: 10px 0;
+  list-style: none;
 
-
-  &:not(:last-child){
-    margin-right: 20px;
-  }
-
-  &--active {
+  &--active .menu__link {
     @include menu-bold
-  }
-
-  &:hover {
-    color: $dark100;
   }
 
   &--dropdown{
     position: relative;
 
-    &:hover > .menu__dropdown {
+    &:hover .menu__dropdown {
       display: block;
     }
   }
@@ -50,10 +41,20 @@
 
   &-item {
     padding: 10px 0;
+    color: $dark50;
+
 
     &:hover {
       color: $dark100;
     }
+  }
+}
+
+.menu__link {
+  color: $dark50;
+
+  &:hover {
+    color: $dark100;
   }
 }
 

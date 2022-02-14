@@ -3,7 +3,6 @@
 
 .header {
   width: 100%;
-
 }
 
 .header__container {
@@ -14,21 +13,22 @@
 }
 
 
-.header__logo {
-  max-width: 100%;
-  height: auto;
-  cursor: pointer;
-}
+
 
 .header__menu {
   display: none;
+  padding: 0;
 
   @include tablet {
-    display: block;
+    display: flex;
   }
 
   @include desktop {
     margin-left: auto;
+  }
+
+  & .menu__item:not(:last-child){
+    margin-right: 20px;
   }
 }
 

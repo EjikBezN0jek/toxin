@@ -41,6 +41,7 @@ main {
   //max-width: 320px;
   max-width: 1200px;
   padding: 0 20px;
+  //width: 100%;
 }
 
 .link {
@@ -48,4 +49,11 @@ main {
   margin: 0;
   padding: 0;
   line-height: 1;
+  display: inline-block;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
 }
