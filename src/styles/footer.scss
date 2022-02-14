@@ -1,0 +1,85 @@
+@import "variables";
+@import "mixins";
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px 20px;
+  text-align: center;
+
+  @include tablet {
+    padding: 0;
+    text-align: left;
+  }
+}
+
+.footer__container {
+
+  @include tablet {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 20px;
+  }
+
+}
+
+.footer__menu {
+  display: none;
+
+  @include tablet{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    flex-grow: 1;
+  }
+
+}
+
+.footer__wrapper {
+  width: 25%;
+  max-width: 260px;
+}
+
+.footer__menu-list {
+  padding: 0;
+  margin: 0;
+}
+
+.footer__title {
+  display: none;
+
+  @include tablet{
+    display: block;
+    text-transform: uppercase;
+    font-weight: $bold;
+    font-size: $h3;
+    margin-bottom: 10px;
+    color: $dark100;
+  }
+}
+
+.footer__text {
+  display: none;
+
+  @include tablet {
+    display: block;
+    color: $dark75;
+    line-height: 1.5;
+    margin: 20px 0;
+  }
+
+}
+
+.footer__form {
+  display: none;
+
+  @include tablet {
+    display: block;
+    width: 260px;
+    position: relative;
+  }
+
+}

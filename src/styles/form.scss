@@ -1,0 +1,27 @@
+@import "variables";
+@import "mixins";
+
+
+.input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid $dark25;
+  border-radius: 4px;
+  outline: none;
+
+  &::placeholder {
+    color: $dark25;
+  }
+
+  &:focus {
+    border:1px solid $dark75;
+  }
+
+}
+
+.form__btn {
+  position: absolute;
+  padding: 10px 15px;
+  top: 0;
+  right: 0;
+}
