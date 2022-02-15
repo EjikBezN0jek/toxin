@@ -9,6 +9,7 @@
   font-size: $h3;
   text-transform: uppercase;
   font-weight: $bold;
+  cursor: pointer;
 
 
   &--fill {
@@ -64,7 +65,6 @@
   color: $purple;
   padding: 0;
   background: transparent;
-  cursor: pointer;
 
   @include tablet {
     display: none;
