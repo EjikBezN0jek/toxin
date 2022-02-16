@@ -10,6 +10,7 @@
   text-transform: uppercase;
   font-weight: $bold;
   cursor: pointer;
+  color: $purple;
 
 
   &--fill {
@@ -26,7 +27,6 @@
 
   &--ghost {
     position: relative;
-    color: $purple;
     background: white;
     padding: 7px 17px;
 
@@ -69,4 +69,32 @@
   @include tablet {
     display: none;
   }
+}
+
+
+.input__btn {
+  position: absolute;
+  padding: 10px 15px;
+  right: 0;
+}
+
+
+.arrow__btn {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 15px;
+}
+
+
+.dropdown__btn {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+}
+
+
+.action__btn {
+  text-align: right;
+  margin-top: 20px;
 }

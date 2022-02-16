@@ -1,8 +1,60 @@
 @@include('header.html')
 
 <main class="index__main">
-    <div class="index__slider">
-<!--        <img src="./img/home-slide-1.jpg" alt="" class="slider__img&#45;&#45;1">-->
+    <div class="index__slider"></div>
+    <div class="index__container container">
+        <form action="" class=" form">
+        <p class="form__title">Найдём номера под ваши пожелания</p>
+        <div class="date-picker__wrapper">
+            <label for="arrival" class="input__label">
+                Прибытие
+                <input type="date" name="arrival-date" id="arrival" class="date-picker input" placeholder="ДД.ММ.ГГГГ">
+            </label>
+            <label for="departure" class="input__label">
+                Выезд
+                <input type="date" name="departure-date" id="departure" class="date-picker input" placeholder="ДД.ММ.ГГГГ">
+            </label>
+        </div>
+        <label for="guests" class="input__label">
+            Гости
+            <input type="text" name="guests" id="guests" class="guests-picker input" placeholder="Сколько гостей">
+            <button type="button" class="dropdown__btn btn">
+                <img src="./icons/expand_more.png" alt="">
+            </button>
+        </label>
+            <div class="guests__dropdown">
+                <label for="adults" class="input__label quantity__label">
+                    Взрослые
+                    <div class="quantity-block">
+                        <button class="quantity-arrow-minus"> - </button>
+                        <input class="quantity-num" type="number" id="adults" value="0"/>
+                        <button class="quantity-arrow-plus"> + </button>
+                    </div>
+                </label>
+
+                <label for="children" class="input__label quantity__label">
+                    Дети
+                    <div class="quantity-block">
+                        <button class="quantity-arrow-minus"> - </button>
+                        <input class="quantity-num" type="number" id="children" value="0"/>
+                        <button class="quantity-arrow-plus"> + </button>
+                    </div>
+                </label>
+                <label for="babies" class="input__label quantity__label">
+                    Младенцы
+                    <div class="quantity-block">
+                        <button class="quantity-arrow-minus"> - </button>
+                        <input class="quantity-num" type="number" id="babies" value="0"/>
+                        <button class="quantity-arrow-plus"> + </button>
+                    </div>
+                </label>
+                <button type="button" class="action__btn btn">Применить</button>
+            </div>
+        <button type="button" class="form__btn btn--fill btn">
+            Подобрать номер
+            <img src="icons/arrow.svg" alt="" class="arrow__btn">
+        </button>
+    </form>
     </div>
 </main>
 
