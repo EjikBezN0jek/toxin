@@ -62,22 +62,27 @@
 .date-picker {
   width: 150px;
 
+  //&::placeholder {
+  //  color: $dark25;
+  //  text-transform: uppercase;
+  //}
+
   &::-webkit-datetime-edit-month-field {
-    color: $dark75;
+    color: $dark25;
     text-transform: uppercase;
     &:focus {
       background: none;
     }
   }
   &::-webkit-datetime-edit-day-field {
-    color: $dark75;
+    color: $dark25;
     text-transform: uppercase;
     &:focus {
       background: none;
     }
   }
   &::-webkit-datetime-edit-year-field {
-    color: $dark75;
+    color: $dark25;
     text-transform: uppercase;
     &:focus {
       background: none;
@@ -90,64 +95,7 @@
   }
 }
 
-.guests-picker {
-  width: 100%;
 
-  &::placeholder {
-    color: $dark75;
-  }
-
-  &::-webkit-inner-spin-button {
-    background: url(./icons/expand_more.png) no-repeat center;
-  }
-}
-
-.quantity__label {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.guests__dropdown {
-  margin-top: -20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 15px;
-  border: 1px solid $dark25;
-  border-radius: 0 0 4px 4px;
-}
-
-.quantity-arrow-minus,
-.quantity-arrow-plus {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid $dark25;
-  color: $dark25;
-  background: none;
-  cursor: pointer;
-}
-
-.quantity-num {
-  outline: none;
-  border: none;
-  text-transform: uppercase;
-  font-weight: $bold;
-  font-size: $h3;
-  padding: 0 10px;
-  width: 35px;
-  text-align: center;
-
-
-  &::-webkit-inner-spin-button,
-  &::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0;
-  }
-}
 
 
 

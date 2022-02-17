@@ -1,0 +1,121 @@
+@import "variables";
+@import "mixins";
+
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown__input {
+  position: relative;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 55%;
+    right: 15px;
+    transform: translate(0, -55%);
+    width: 15px;
+    height: 15px;
+    background: url("./icons/expand_more.png") no-repeat center;
+  }
+
+  &--open {
+    & > .guests-picker  {
+      border: 1px solid $dark75;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 40%;
+      right: 15px;
+      transform: rotate(180deg);
+      width: 15px;
+      height: 15px;
+      background: url("./icons/expand_more.png") no-repeat center;
+    }
+  }
+}
+
+.guests-picker {
+  position: relative;
+  cursor: pointer;
+
+  &::placeholder {
+    color: $dark25;
+  }
+
+  &--open {
+    border-radius: 4px 4px 0 0;
+  }
+
+}
+
+.dropdown__list {
+  display: none;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid $dark75;
+  border-radius: 0 0 4px 4px;
+  background: white;
+
+
+  &--open {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    top: 54px;
+    left: 0;
+    z-index: 10;
+  }
+}
+
+.dropdown__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quantity-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+
+.quantity-arrow-minus,
+.quantity-arrow-plus {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid $dark25;
+  color: $dark25;
+  background: none;
+  cursor: pointer;
+
+  &:hover {
+    color: $dark75;
+    border: 1px solid $dark75;
+  }
+}
+
+.quantity-num {
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  font-weight: $bold;
+  font-size: $h3;
+  display: inline-block;
+  min-width: 32px;
+  text-align: center;
+}
+
+
+.dropdown__buttons {
+  display: flex;
+  justify-content: space-between;
+}

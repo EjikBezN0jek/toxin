@@ -89,12 +89,21 @@
 
 .dropdown__btn {
   position: absolute;
-  top: 50%;
+  top: 67%;
   right: 15px;
+  padding: 10px 15px;
 }
 
 
 .action__btn {
-  text-align: right;
   margin-top: 20px;
+}
+
+.remove__btn {
+  display: none;
+}
+
+.apply__btn {
+  text-align: right;
+  flex-grow: 1;
 }
