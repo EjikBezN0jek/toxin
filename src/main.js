@@ -5,6 +5,9 @@ const dropdownInput = document.querySelector('.dropdown__input');
 
 const quantityArrowMinus = document.querySelectorAll(".quantity-arrow-minus");
 const quantityArrowPlus = document.querySelectorAll(".quantity-arrow-plus");
+const removeBtn = document.querySelector('.remove__btn');
+const applyBtn = document.querySelector('.apply__btn');
+
 let quantityNumAdults = document.querySelector(".quantity-num--adults");
 let quantityNumChildren = document.querySelector(".quantity-num--children");
 let quantityNumBabies = document.querySelector(".quantity-num--babies");
@@ -53,6 +56,12 @@ function quantityMinus(e) {
     guestsPicker.value = `${adultsCounter} взрослых, ${childrenCounter} детей, ${babiesCounter} младенцев`
   }
 
+
+  if(guestsPicker.value !== ''){
+    removeBtn.style.display = 'block';
+  } else {
+    removeBtn.style.display = 'none';
+  }
 }
 
 function quantityPlus(e) {
@@ -77,25 +86,49 @@ function quantityPlus(e) {
     guestsPicker.value = ''
   } else if(adultsCounter !== 0 && childrenCounter === 0 && babiesCounter === 0) {
     guestsPicker.value = `${adultsCounter} взрослых`
-  }else if (childrenCounter === 0 && adultsCounter !== 0 &&  babiesCounter !== 0) {
+  }else if (adultsCounter !== 0 &&  babiesCounter !== 0 && childrenCounter === 0) {
     guestsPicker.value = `${adultsCounter} взрослых, ${babiesCounter} младенцев`
-  }else if (babiesCounter === 0 && adultsCounter !== 0 && childrenCounter !== 0) {
+  }else if (adultsCounter !== 0 && childrenCounter !== 0 && babiesCounter === 0) {
     guestsPicker.value = `${adultsCounter} взрослых, ${childrenCounter} детей`
   } else {
     guestsPicker.value = `${adultsCounter} взрослых, ${childrenCounter} детей, ${babiesCounter} младенцев`
   }
+
+  if(guestsPicker.value !== '' || quantityNumChildren.innerHTML !== '0' || quantityNumBabies.innerHTML !== '0'){
+    removeBtn.style.display = 'block';
+  } else {
+    removeBtn.style.display = 'none';
+  }
+}
+
+function clearInput() {
+  guestsPicker.value = '';
+  quantityNumAdults.innerHTML = '0';
+  quantityNumChildren.innerHTML = '0';
+  quantityNumBabies.innerHTML = '0';
+  adultsCounter = 0;
+  childrenCounter = 0;
+  babiesCounter = 0;
+  removeBtn.style.display = 'none';
+}
+
+function closeDropdown() {
+  dropdownList.classList.remove('dropdown__list--open');
+  dropdownInput.classList.remove('dropdown__input--open');
+  guestsPicker.classList.remove('guests-picker--open');
 }
 
 menuItem.forEach(link => link.addEventListener("click", (e) => changePage(e.target)))
 guestsPicker.addEventListener('click', toggleDropdown)
 window.addEventListener('click', function (e) {
   if (!dropdownList.contains(e.target) && !dropdownInput.contains(e.target)) {
-    dropdownList.classList.remove('dropdown__list--open');
-    dropdownInput.classList.remove('dropdown__input--open');
-    guestsPicker.classList.remove('guests-picker--open');
+    closeDropdown()
   }
 })
 
 quantityArrowMinus.forEach(btn => btn.addEventListener('click', (e) => quantityMinus(e.target.parentNode.dataset.name)));
 quantityArrowPlus.forEach(btn => btn.addEventListener('click', (e) => quantityPlus(e.target.parentNode.dataset.name)));
+removeBtn.addEventListener('click', clearInput)
+applyBtn.addEventListener('click', closeDropdown)
+
 

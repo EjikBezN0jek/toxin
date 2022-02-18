@@ -1,0 +1,42 @@
+@import "variables";
+@import "mixins";
+
+.date-picker__wrapper {
+  gap: 10px;
+
+  @include tablet {
+    gap: 20px;
+  }
+}
+
+
+.date-picker {
+  width: 150px;
+
+  &::-webkit-datetime-edit-month-field {
+    color: $dark25;
+    text-transform: uppercase;
+    &:focus {
+      background: none;
+    }
+  }
+  &::-webkit-datetime-edit-day-field {
+    color: $dark25;
+    text-transform: uppercase;
+    &:focus {
+      background: none;
+    }
+  }
+  &::-webkit-datetime-edit-year-field {
+    color: $dark25;
+    text-transform: uppercase;
+    &:focus {
+      background: none;
+    }
+  }
+
+  &::-webkit-calendar-picker-indicator {
+    background: url(./icons/expand_more.png) no-repeat center;
+    cursor: pointer;
+  }
+}

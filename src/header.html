@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="header">
-    <ul class="header__container container">
+    <ul class="header__container container flex">
         <button type="button" class="burger btn"><i class="fas fa-solid fa-bars"></i></button>
         <a href="./index.html" class="logo"><img src="./img/logo.svg" alt="logo"></a>
         <ul class="header__menu menu">
@@ -45,8 +45,10 @@
         </ul>
         <a href="" class="login-btn"><i class="fas fa-solid fa-user"></i></a>
         <div class="header__buttons">
-            <a href="" class="header__btn btn--ghost btn link">Войти</a>
-            <a href="" class="header__btn  btn--fill btn link">Зарегистрироваться</a>
+            <div class="header__btn btn--ghost-bg">
+                <a href="sign-in.html" class=" btn--ghost btn link">Войти</a>
+            </div>
+            <a href="./registration.html" class="header__btn  btn--fill btn link">Зарегистрироваться</a>
         </div>
     </ul>
 </div>

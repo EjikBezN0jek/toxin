@@ -5,7 +5,7 @@
     <div class="index__container container">
         <form action="" class=" form">
             <p class="form__title">Найдём номера под ваши пожелания</p>
-            <div class="date-picker__wrapper">
+            <div class="date-picker__wrapper flex">
                 <label for="arrival" class="input__label">
                     Прибытие
                     <input type="date" name="arrival-date" id="arrival" class="date-picker input"
@@ -19,38 +19,38 @@
             </div>
             <div class="dropdown">
                 <p class="dropdown__label input__label">Гости</p>
-                <div class="dropdown__input dropdown__input--open">
+                <div class="dropdown__input">
                     <input name="guests" class="guests-picker input" placeholder="Сколько гостей" readonly="readonly">
                 </div>
                 <div class="dropdown__list" >
-                    <div class="dropdown__item">
+                    <div class="flex">
                         <p class="input__label">Взрослые</p>
-                        <div class="quantity-block" data-name="adults">
+                        <div class="quantity-block flex" data-name="adults">
                             <button type="button" class="quantity-arrow-minus btn"> - </button>
                             <span class="quantity-num quantity-num--adults"> 0 </span>
                             <button type="button" class="quantity-arrow-plus btn"> + </button>
                         </div>
                     </div>
                     
-                    <div class="dropdown__item">
+                    <div class="flex">
                         <p class="input__label"> Дети</p>
-                        <div class="quantity-block" data-name="children">
+                        <div class="quantity-block flex" data-name="children">
                             <button type="button" class="quantity-arrow-minus btn"> - </button>
                             <span class="quantity-num quantity-num--children"> 0 </span>
                             <button type="button" class="quantity-arrow-plus btn"> + </button>
                         </div>
                     </div>
 
-                    <div class="dropdown__item">
+                    <div class="flex">
                         <p class="input__label"> Младенцы</p>
-                        <div class="quantity-block" data-name="babies">
+                        <div class="quantity-block flex" data-name="babies">
                             <button type="button" class="quantity-arrow-minus btn"> - </button>
                             <span class="quantity-num quantity-num--babies"> 0 </span>
                             <button type="button" class="quantity-arrow-plus btn"> + </button>
                         </div>
                     </div>
 
-                    <div class="dropdown__buttons">
+                    <div class="dropdown__buttons flex">
                         <button type="button" class="action__btn remove__btn btn">Очистить</button>
                         <button type="button" class="action__btn apply__btn btn">Применить</button>
                     </div>

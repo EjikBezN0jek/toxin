@@ -73,16 +73,7 @@
   }
 }
 
-.dropdown__item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .quantity-block {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   gap: 5px;
 }
 
@@ -116,6 +107,12 @@
 
 
 .dropdown__buttons {
-  display: flex;
-  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.dropdown__btn {
+  position: absolute;
+  top: 67%;
+  right: 15px;
+  padding: 10px 15px;
 }
