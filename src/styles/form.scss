@@ -28,6 +28,12 @@
   width: 100%;
 }
 
+.input__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 
 .input {
   width: 100%;
@@ -41,7 +47,7 @@
     color: $dark25;
   }
 
-  &:focus {
+  &:focus, &:hover {
     border:1px solid $dark75;
   }
 

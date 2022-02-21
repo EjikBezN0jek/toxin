@@ -1,0 +1,12 @@
+@import "variables";
+@import "mixins";
+
+.switch {
+  display: flex;
+  align-items: center;
+}
+
+.switch__text {
+  margin-left: 10px;
+  color: $dark75;
+}

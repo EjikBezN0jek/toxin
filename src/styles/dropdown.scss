@@ -64,11 +64,11 @@
 
   &--open {
     position: absolute;
+    top: calc(100% - 1px);
+    left: 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    top: 54px;
-    left: 0;
     z-index: 10;
   }
 }

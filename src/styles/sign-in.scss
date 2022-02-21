@@ -17,14 +17,15 @@
   height: 100%;
 }
 
+.sign-in__form, .registration__form  {
+  display: none;
 
-.input__wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  &.show {
+    display: flex;
+  }
 }
-
 
 .sign-in__input {
   margin: 0;
 }
+
