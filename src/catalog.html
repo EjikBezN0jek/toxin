@@ -1,9 +1,156 @@
 @@include('header.html')
 
 <main>
-    <div class="container">
-        <p>catalog</p>
+    <div class="container catalog__container">
+        <div class="filters">
+            <label for="residence" class="input__label">
+                Даты пребывания в отеле
+                <input type="date" name="residence-date" id="residence" class="date-picker input"
+                       placeholder="ДД.ММ.ГГГГ" required>
+            </label>
+            <div class="dropdown">
+                <p class="dropdown__label input__label">Гости</p>
+                <div class="dropdown__input">
+                    <input name="guests" class="guests-picker input" placeholder="Сколько гостей" readonly="readonly">
+                </div>
+                <div class="dropdown__list">
+                    <div class="flex">
+                        <p class="input__label">Взрослые</p>
+                        <div class="quantity-block flex" data-name="adults">
+                            <button type="button" class="quantity-arrow-minus btn"> -</button>
+                            <span class="quantity-num quantity-num--adults"> 0 </span>
+                            <button type="button" class="quantity-arrow-plus btn"> +</button>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <p class="input__label"> Дети</p>
+                        <div class="quantity-block flex" data-name="children">
+                            <button type="button" class="quantity-arrow-minus btn"> -</button>
+                            <span class="quantity-num quantity-num--children"> 0 </span>
+                            <button type="button" class="quantity-arrow-plus btn"> +</button>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <p class="input__label"> Младенцы</p>
+                        <div class="quantity-block flex" data-name="babies">
+                            <button type="button" class="quantity-arrow-minus btn"> -</button>
+                            <span class="quantity-num quantity-num--babies"> 0 </span>
+                            <button type="button" class="quantity-arrow-plus btn"> +</button>
+                        </div>
+                    </div>
+
+                    <div class="dropdown__buttons flex">
+                        <button type="button" class="action__btn remove__btn btn">Очистить</button>
+                        <button type="button" class="action__btn apply__btn btn">Применить</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="range">
+                <div class="flex">
+                    <p class=" input__label">Диапазон цены</p>
+                    <p class="filters__text"><span class="range__price--min">0</span>₽ - <span
+                            class="range__price--max">15 000</span>₽</p>
+                </div>
+                <div class="range__controls">
+                    <div class="range__scale">
+                        <div class="range__bar"></div>
+                    </div>
+                    <div class="range__toggle range__toggle--min"></div>
+                    <div class="range__toggle range__toggle--max"></div>
+                </div>
+                <p class="filters__text">Стоимость за сутки пребывания в номере</p>
+            </div>
+            <div class="checkbox">
+                <p class="input__label">Правила дома</p>
+                <div class="checkbox__container">
+                    <div class="checkbox__item">
+                        <input type="checkbox" id="checkbox-1" class="checkbox__input">
+                        <label for="checkbox-1" class="checkbox__label">Можно курить</label>
+                    </div>
+                    <div class="checkbox__item">
+                        <input type="checkbox" id="checkbox-2" class="checkbox__input">
+                        <label for="checkbox-2" class="checkbox__label">Можно с питомцами</label>
+                    </div>
+                    <div class="checkbox__item">
+                        <input type="checkbox" id="checkbox-3" class="checkbox__input">
+                        <label for="checkbox-3" class="checkbox__label">Можно пригласить гостей<br>(до 10 человек)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="checkbox">
+                <p class="input__label">Доступность</p>
+                <div class="checkbox__container">
+                    <div class="checkbox__item">
+                        <input type="checkbox" id="checkbox__item-1" class="checkbox__input">
+                        <label for="checkbox__item-1" class="checkbox__label">
+                            <span class="filters__text">
+                                <span class="checkbox__label--bold">Широкий коридор</span>
+                                <br>Ширина коридоров в номере<br>не  менее 91 см.
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="checkbox__item">
+                        <input type="checkbox" id="checkbox__item-2" class="checkbox__input">
+                        <label for="checkbox__item-2" class="checkbox__label">
+                            <span class="filters__text">
+                                <span class="checkbox__label--bold">Помощник для инвалидов</span>
+                                <br>На 1 этаже вас встретит специалист<br>и проводит до номера.
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <p class="dropdown__label input__label">Удобства номера</p>
+                <div class="dropdown__input">
+                    <input name="guests" class="guests-picker input" placeholder="2 спальни, 2 кровати..." readonly="readonly">
+                </div>
+                <div class="dropdown__list">
+                    <div class="flex">
+                        <p class="input__label">Взрослые</p>
+                        <div class="quantity-block flex" data-name="adults">
+                            <button type="button" class="quantity-arrow-minus btn"> -</button>
+                            <span class="quantity-num quantity-num--adults"> 0 </span>
+                            <button type="button" class="quantity-arrow-plus btn"> +</button>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <p class="input__label"> Дети</p>
+                        <div class="quantity-block flex" data-name="children">
+                            <button type="button" class="quantity-arrow-minus btn"> -</button>
+                            <span class="quantity-num quantity-num--children"> 0 </span>
+                            <button type="button" class="quantity-arrow-plus btn"> +</button>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+                        <p class="input__label"> Младенцы</p>
+                        <div class="quantity-block flex" data-name="babies">
+                            <button type="button" class="quantity-arrow-minus btn"> -</button>
+                            <span class="quantity-num quantity-num--babies"> 0 </span>
+                            <button type="button" class="quantity-arrow-plus btn"> +</button>
+                        </div>
+                    </div>
+
+                    <div class="dropdown__buttons flex">
+                        <button type="button" class="action__btn remove__btn btn">Очистить</button>
+                        <button type="button" class="action__btn apply__btn btn">Применить</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="catalog__content">
+            <p class="title">Номера, которые мы для вас подобрали</p>
+        </div>
+
     </div>
 </main>
-
+<script src="dropdown.js"></script>
+<script src="range.js"></script>
 @@include('footer.html')

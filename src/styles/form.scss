@@ -14,8 +14,6 @@
 }
 
 .form__title {
-  font-size: $h1;
-  font-weight: $bold;
   text-align: center;
 
   @include desktop {
@@ -56,6 +54,10 @@
     text-transform: uppercase;
     font-weight: $bold;
     font-size: $h3;
+  }
+
+  &:valid {
+    border: 1px solid $green;
   }
 }
 

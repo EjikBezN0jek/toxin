@@ -1,0 +1,12 @@
+@import "variables";
+@import "mixins";
+
+.header {
+  box-shadow: 0 10px 20px $dark5;
+}
+
+.catalog__container {
+  display: flex;
+  gap: 30px;
+  padding: 30px 20px;
+}

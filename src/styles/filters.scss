@@ -1,0 +1,14 @@
+@import "variables";
+@import "mixins";
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 266px;
+}
+
+.filters__text {
+  color: $dark50;
+  font-size: $h3;
+}

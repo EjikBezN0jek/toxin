@@ -1,0 +1,270 @@
+@import "variables";
+@import "mixins";
+
+.datepicker__wrapper {
+  gap: 10px;
+
+  @include tablet {
+    gap: 20px;
+  }
+}
+
+.datepicker__wrapper .date-picker {
+  width: 150px;
+}
+
+.datepicker__item {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 20px;
+    height: 20px;
+    background: url("./icons/expand_more.png") no-repeat center;
+  }
+}
+
+.datepicker {
+  box-sizing: border-box;
+  border: 1px solid $dark25;
+  box-shadow: 0 10px 20px $dark5;
+  font-family: Montserrat, sans-serif, sans-serif;
+  font-size: $h3;
+  color: $dark50;
+  width: 320px;
+  padding: 15px 19px;
+}
+
+.datepicker--pointer {
+  display: none;
+}
+
+.datepicker--content {
+  padding: 20px 0;
+}
+
+
+.datepicker--nav-title {
+  font-size: $h2;
+  font-weight: $bold;
+  color: $dark100;
+  text-transform: none;
+
+  & i {
+    font-size: $h2;
+    font-weight: $bold;
+    color: $dark100;
+    margin-left: 5px;
+  }
+}
+
+.datepicker--nav-action {
+  position: relative;
+  user-select: none;
+
+  & svg {
+    display: none;
+  }
+
+  &[data-action = 'prev']:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0,-50%) rotate(180deg);
+    width: 20px;
+    height: 20px;
+    background: url("./icons/arrow_purple.svg") no-repeat center;
+  }
+
+  &[data-action = 'next']:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    width: 20px;
+    height: 20px;
+    background: url("./icons/arrow_purple.svg") no-repeat center;
+  }
+
+  &:hover {
+    background: none;
+    opacity: 0.6;
+  }
+
+}
+
+.datepicker--day-name {
+  color: $purple;
+  text-transform: none;
+  font-size: $h3;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  flex: 1;
+}
+
+.datepicker--cells {
+  padding: 0;
+}
+
+.datepicker--cell-day {
+  font-size: $h3;
+  font-weight: normal;
+  color: $dark75;
+}
+
+.datepicker--cell {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &.-focus- {
+    color: white;
+    background: $gradient;
+    font-weight: bold;
+  }
+}
+
+
+.datepicker--cell.-current- {
+  color: white;
+  background: $secondary-gradient;
+  font-weight: $bold;
+
+  &:hover {
+    color: white;
+    opacity: 0.6;
+  }
+
+  &.-focus- {
+    background: $secondary-gradient;
+  }
+}
+
+
+.datepicker--cell.-in-range- {
+  color: white;
+  background: $gradient;
+  opacity: 0.25;
+}
+
+.datepicker--cell.-disabled- {
+  cursor: default;
+  color: $dark25;
+
+  &.-focus- {
+    background: none;
+    font-weight: normal;
+  }
+}
+
+.datepicker--cell.-disabled-.-in-range- {
+  color: $dark50;
+}
+
+.datepicker--cell.-range-from-, .datepicker--cell.-range-to- {
+  background: $gradient;
+  position: relative;
+  border-radius: 50%;
+  border: none;
+}
+
+.datepicker--cell.-range-from-:after, .datepicker--cell.-range-to-:before {
+  content: '';
+  position: absolute;
+  height: 40px;
+  width: 20px;
+  background: $gradient;
+  opacity: 0.25;
+  z-index: -1;
+}
+
+.datepicker--cell.-range-from-:after {
+  right: 0;
+}
+
+.datepicker--cell.-range-to-:before {
+  left: 0;
+}
+
+.datepicker--cell.-selected- {
+  background: $gradient;
+  font-weight: $bold;
+  border-radius: 50%;
+
+}
+
+.datepicker--cell.-selected-.-current- {
+  background: $gradient;
+}
+
+.datepicker--cell.-selected-.-focus- {
+  background: $gradient;
+}
+
+.datepicker--cell:empty {
+  cursor: default;
+}
+
+.-selected-.datepicker--cell-day.-other-month-, .-selected-.datepicker--cell-year.-other-decade- {
+  background: $gradient;
+}
+
+.-selected-.-focus-.datepicker--cell-day.-other-month-, .-selected-.datepicker--cell-year.-other-decade- {
+  background: $gradient;
+}
+
+.-in-range-.datepicker--cell-day.-other-month-, .-in-range-.datepicker--cell-year.-other-decade- {
+ color: white;
+}
+
+.datepicker--cell-day.-other-month-:hover, .datepicker--cell-year.-other-decade-:hover {
+  color: white;
+}
+
+.datepicker--nav {
+  border: none;
+  min-height: 45px;
+  padding: 0;
+}
+
+
+.datepicker--buttons {
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.datepicker--button {
+  display: block;
+  height: auto;
+  flex-grow: 0;
+  color: $purple;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-weight: $bold;
+
+  &:hover {
+    color: $dark50;
+    background: none;
+  }
+}
+
+.datepicker--button-apply {
+  color: $purple;
+  cursor: pointer;
+
+  &:hover, &:focus {
+    opacity: 0.5;
+  }
+}

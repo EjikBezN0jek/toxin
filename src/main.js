@@ -8,4 +8,3 @@ function changePage(link) {
 menuItem.forEach(link => link.addEventListener('click', (e) => changePage(e.target)))
 
 
-

@@ -3,50 +3,52 @@
 <main class="index__main">
     <div class="index__slider"></div>
     <div class="index__container container">
-        <form action="" class=" form">
-            <p class="form__title">Найдём номера под ваши пожелания</p>
-            <div class="date-picker__wrapper flex">
-                <label for="arrival" class="input__label">
-                    Прибытие
-                    <input type="date" name="arrival-date" id="arrival" class="date-picker input"
-                           placeholder="ДД.ММ.ГГГГ">
-                </label>
-                <label for="departure" class="input__label">
-                    Выезд
-                    <input type="date" name="departure-date" id="departure" class="date-picker input"
-                           placeholder="ДД.ММ.ГГГГ">
-                </label>
+        <form class=" form">
+            <p class="form__title title">Найдём номера под ваши пожелания</p>
+            <div class="datepicker__wrapper flex" >
+                <div class="datepicker__item">
+                    <label for="datepicker-start" class="input__label">
+                        Прибытие
+                        <input id="datepicker-start" class="date-picker input" placeholder="ДД.ММ.ГГГГ" readonly="readonly">
+                    </label>
+                </div>
+                <div class="datepicker__item">
+                    <label for="datepicker-end" class="input__label">
+                        Выезд
+                        <input id="datepicker-end" class="date-picker input" placeholder="ДД.ММ.ГГГГ" readonly="readonly">
+                    </label>
+                </div>
             </div>
             <div class="dropdown">
                 <p class="dropdown__label input__label">Гости</p>
                 <div class="dropdown__input">
                     <input name="guests" class="guests-picker input" placeholder="Сколько гостей" readonly="readonly">
                 </div>
-                <div class="dropdown__list" >
+                <div class="dropdown__list">
                     <div class="flex">
                         <p class="input__label">Взрослые</p>
                         <div class="quantity-block flex" data-name="adults">
-                            <button type="button" class="quantity-arrow-minus btn"> - </button>
+                            <button type="button" class="quantity-arrow-minus btn"> -</button>
                             <span class="quantity-num quantity-num--adults"> 0 </span>
-                            <button type="button" class="quantity-arrow-plus btn"> + </button>
+                            <button type="button" class="quantity-arrow-plus btn"> +</button>
                         </div>
                     </div>
-                    
+
                     <div class="flex">
                         <p class="input__label"> Дети</p>
                         <div class="quantity-block flex" data-name="children">
-                            <button type="button" class="quantity-arrow-minus btn"> - </button>
+                            <button type="button" class="quantity-arrow-minus btn"> -</button>
                             <span class="quantity-num quantity-num--children"> 0 </span>
-                            <button type="button" class="quantity-arrow-plus btn"> + </button>
+                            <button type="button" class="quantity-arrow-plus btn"> +</button>
                         </div>
                     </div>
 
                     <div class="flex">
                         <p class="input__label"> Младенцы</p>
                         <div class="quantity-block flex" data-name="babies">
-                            <button type="button" class="quantity-arrow-minus btn"> - </button>
+                            <button type="button" class="quantity-arrow-minus btn"> -</button>
                             <span class="quantity-num quantity-num--babies"> 0 </span>
-                            <button type="button" class="quantity-arrow-plus btn"> + </button>
+                            <button type="button" class="quantity-arrow-plus btn"> +</button>
                         </div>
                     </div>
 
@@ -65,5 +67,7 @@
     </div>
 </main>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"></script>
+<script src="datepicker.js"></script>
 <script src="dropdown.js"></script>
 @@include('footer.html')

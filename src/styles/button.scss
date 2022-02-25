@@ -15,7 +15,7 @@
   &--fill {
     padding: 10px 20px;
     color: white;
-    background: linear-gradient(rgba(188, 156, 255, 1), rgba(139, 164, 249, 1));
+    background: $gradient;
 
     &:hover {
       opacity: 0.7;
@@ -27,23 +27,6 @@
     position: relative;
     background: white;
     padding: 7px 17px;
-
-    //&-bg {
-    //  display: inline-flex;
-    //  align-items: center;
-    //  justify-content: center;
-    //  padding: 2px;
-    //  background: linear-gradient(rgba(188, 156, 255, 1), rgba(139, 164, 249, 1));
-    //  border-radius: 22px;
-    //
-    //  &:after {
-    //    z-index: -1;
-    //  }
-    //
-    //  &:hover {
-    //    background: linear-gradient(rgba(188, 156, 255, 0.7), rgba(139, 164, 249, 0.7));
-    //  }
-    //}
   }
 }
 
@@ -148,7 +131,7 @@
     left: -2px;
     width: calc(100% + 4px);
     height: calc(100% + 4px);
-    background: linear-gradient(rgba(188, 156, 255, 1), rgba(139, 164, 249, 1));
+    background: $gradient;
     z-index: -2;
   }
 
