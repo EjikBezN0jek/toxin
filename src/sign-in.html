@@ -8,8 +8,7 @@
                 <input type="email" class="sign-in__input input" placeholder="Email" name="email" required>
                 <input type="password" class="sign-in__input input" placeholder="Пароль" name="password" required
                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-z]).{8,}$"
-                       title="Добавьте как минимум 1 заглавную букву, 1 строчную букву и 1 цифру"
-                >
+                       title="Добавьте как минимум 1 заглавную букву, 1 строчную букву и 1 цифру">
             </div>
             <button type="submit" class="form__btn btn--fill btn">
                 Войти
@@ -37,21 +36,19 @@
                 </div>
 
             </div>
-            <div class="input__wrapper">
-                <label class="input__label">
-                    Дата рождения
-                    <input type="text" placeholder="ДД.ММ.ГГ" class="input" name="date" required
-                           pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d"
-                    >
-                </label>
+            <div class="wrapper">
+                <p class="input__label">Дата рождения</p>
+                <input type="text" placeholder="ДД.ММ.ГГ" class="input" name="date" required
+                       pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d">
             </div>
             <div class="input__wrapper">
-                <p class="input__label">Данные для входа в сервис</p>
-                <input type="email" class="sign-in__input input" placeholder="Email" name="email" required>
+                <div class="wrapper">
+                    <p class="input__label">Данные для входа в сервис</p>
+                    <input type="email" class="sign-in__input input" placeholder="Email" name="email" required>
+                </div>
                 <input type="password" class="sign-in__input input" placeholder="Пароль" name="password" required
                        pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-z]).{8,}$"
-                       title="Добавьте как минимум 1 заглавную букву, 1 строчную букву и 1 цифру"
-                >
+                       title="Добавьте как минимум 1 заглавную букву, 1 строчную букву и 1 цифру">
                 <div class="switch">
                     <input type="checkbox" class="toggle__btn" name="special_offers">
                     <p class="switch__text">Получать спецпредложения</p>

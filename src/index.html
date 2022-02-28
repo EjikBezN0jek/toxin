@@ -3,21 +3,14 @@
 <main class="index__main">
     <div class="index__slider"></div>
     <div class="index__container container">
-        <form class=" form">
+        <form class="form">
             <p class="form__title title">Найдём номера под ваши пожелания</p>
-            <div class="datepicker__wrapper flex" >
-                <div class="datepicker__item">
-                    <label for="datepicker-start" class="input__label">
-                        Прибытие
-                        <input id="datepicker-start" class="date-picker input" placeholder="ДД.ММ.ГГГГ" readonly="readonly">
-                    </label>
+            <div class="datepicker__wrapper">
+                <div class="datepicker__labels flex">
+                    <p class="datepicker__label input__label">Прибытие</p>
+                    <p class="datepicker__label input__label">Выезд</p>
                 </div>
-                <div class="datepicker__item">
-                    <label for="datepicker-end" class="input__label">
-                        Выезд
-                        <input id="datepicker-end" class="date-picker input" placeholder="ДД.ММ.ГГГГ" readonly="readonly">
-                    </label>
-                </div>
+                <div class="dateselector double flex"></div>
             </div>
             <div class="dropdown">
                 <p class="dropdown__label input__label">Гости</p>

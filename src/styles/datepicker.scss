@@ -1,7 +1,8 @@
 @import "variables";
 @import "mixins";
 
-.datepicker__wrapper {
+
+.dateselector {
   gap: 10px;
 
   @include tablet {
@@ -9,21 +10,39 @@
   }
 }
 
-.datepicker__wrapper .date-picker {
+.double .datepicker__input {
   width: 150px;
+}
+
+.datepicker__input {
+  margin: 0;
+  width: 100%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.datepicker__label {
+  width: 50%;
+
+  &:last-child {
+    margin-left: 20px;
+  }
 }
 
 .datepicker__item {
   position: relative;
+  z-index: 0;
 
   &:after {
     content: '';
     position: absolute;
     top: 50%;
     right: 15px;
+    transform: translate(0, -50%);
     width: 20px;
     height: 20px;
     background: url("./icons/expand_more.png") no-repeat center;
+    z-index: -1;
   }
 }
 
