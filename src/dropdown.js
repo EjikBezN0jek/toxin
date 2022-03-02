@@ -14,6 +14,13 @@ let adultsCounter = 0;
 let childrenCounter = 0;
 let babiesCounter = 0;
 
+// let quantityNumBedrooms = document.querySelector('.quantity-num--bedrooms');
+// let quantityNumBeds = document.querySelector('.quantity-num--beds');
+// let quantityNumBathrooms = document.querySelector('.quantity-num--bathrooms');
+// let bedroomsCounter = 0;
+// let bedsCounter = 0;
+// let bathroomsCounter = 0;
+
 function toggleDropdown() {
   dropdownList.classList.toggle('dropdown__list--open');
   dropdownInput.classList.toggle('dropdown__input--open');
@@ -58,6 +65,44 @@ function quantityMinus(e) {
   }
 }
 
+// function quantityMinus2(e) {
+//   if (e === 'bedrooms' && bedroomsCounter >= 1) {
+//     bedroomsCounter -= 1;
+//     quantityNumBedrooms.innerHTML = bedroomsCounter;
+//   }
+//
+//   if (e === 'beds' && bedsCounter >= 1) {
+//     bedsCounter -= 1;
+//     quantityNumBeds.innerHTML = bedsCounter;
+//   }
+//
+//   if (e === 'bathrooms' && bathroomsCounter >= 1) {
+//     bathroomsCounter -= 1;
+//     quantityNumBathrooms.innerHTML = bathroomsCounter;
+//   }
+//
+//   if(bedroomsCounter === 0){
+//     guestsPicker.value = ''
+//   }else if ( bedroomsCounter === 0 && bedsCounter === 0 && bathroomsCounter === 0) {
+//     guestsPicker.value = ''
+//   } else if( bedroomsCounter !== 0 && bedsCounter === 0 && bathroomsCounter === 0) {
+//     guestsPicker.value = `${ bedroomsCounter} спальни`
+//   }else if (bedsCounter === 0 &&  bedroomsCounter !== 0 &&  bathroomsCounter !== 0) {
+//     guestsPicker.value = `${ bedroomsCounter} спальни, ${bathroomsCounter} ванных комнат`
+//   }else if (bathroomsCounter === 0 &&  bedroomsCounter !== 0 && bedsCounter !== 0) {
+//     guestsPicker.value = `${ bedroomsCounter} спальни, ${bedsCounter} кровати`
+//   } else {
+//     guestsPicker.value = `${ bedroomsCounter} спальни, ${bedsCounter} кровати, ${bathroomsCounter} ванных комнат`
+//   }
+//
+//
+//   if(guestsPicker.value !== ''){
+//     removeBtn.style.display = 'block';
+//   } else {
+//     removeBtn.style.display = 'none';
+//   }
+// }
+
 function quantityPlus(e) {
   if (e === 'adults') {
     adultsCounter += 1;
@@ -95,6 +140,43 @@ function quantityPlus(e) {
   }
 }
 
+// function quantityPlus2(e) {
+//   if (e === 'bedrooms') {
+//     bedroomsCounter += 1;
+//     quantityNumBedrooms.innerHTML = bedroomsCounter;
+//   }
+//
+//   if (e === 'beds') {
+//     bedsCounter += 1;
+//     quantityNumBeds.innerHTML = bedsCounter;
+//   }
+//
+//   if (e === 'bathrooms') {
+//     bathroomsCounter += 1;
+//     quantityNumBathrooms.innerHTML = bathroomsCounter;
+//   }
+//
+//   if( bedroomsCounter === 0){
+//     guestsPicker.value = ''
+//   }else if ( bedroomsCounter === 0 && bedsCounter === 0 && bathroomsCounter === 0) {
+//     guestsPicker.value = ''
+//   } else if( bedroomsCounter !== 0 && bedsCounter === 0 && bathroomsCounter === 0) {
+//     guestsPicker.value = `${ bedroomsCounter} спальни`
+//   }else if ( bedroomsCounter !== 0 &&  bathroomsCounter !== 0 && bedsCounter === 0) {
+//     guestsPicker.value = `${ bedroomsCounter} спальни, ${bathroomsCounter} ванных комнат`
+//   }else if ( bedroomsCounter !== 0 && bedsCounter !== 0 && bathroomsCounter === 0) {
+//     guestsPicker.value = `${ bedroomsCounter} спальни, ${bedsCounter} кровати`
+//   } else {
+//     guestsPicker.value = `${ bedroomsCounter} спальни, ${bedsCounter} кровати, ${bathroomsCounter} ванных комнат`
+//   }
+//
+//   if(guestsPicker.value !== '' || quantityNumBeds.innerHTML !== '0' || quantityNumBathrooms.innerHTML !== '0'){
+//     removeBtn.style.display = 'block';
+//   } else {
+//     removeBtn.style.display = 'none';
+//   }
+// }
+
 function clearInput() {
   guestsPicker.value = '';
   quantityNumAdults.innerHTML = '0';
@@ -105,6 +187,18 @@ function clearInput() {
   babiesCounter = 0;
   removeBtn.style.display = 'none';
 }
+
+// function clearInput2() {
+//   guestsPicker.value = '';
+//   quantityNumBedrooms.innerHTML = '0';
+//   quantityNumBeds.innerHTML = '0';
+//   quantityNumBathrooms.innerHTML = '0';
+//   bedroomsCounter = 0;
+//   bedsCounter = 0;
+//   bathroomsCounter = 0;
+//   removeBtn.style.display = 'none';
+// }
+
 
 function closeDropdown() {
   dropdownList.classList.remove('dropdown__list--open');
@@ -124,3 +218,16 @@ quantityArrowMinus.forEach(btn => btn.addEventListener('click', (e) => quantityM
 quantityArrowPlus.forEach(btn => btn.addEventListener('click', (e) => quantityPlus(e.target.parentNode.dataset.name)));
 removeBtn.addEventListener('click', clearInput)
 applyBtn.addEventListener('click', closeDropdown)
+
+// quantityArrowMinus.forEach(btn => btn.addEventListener('click', (e) => quantityMinus2(e.target.parentNode.dataset.name)));
+// quantityArrowPlus.forEach(btn => btn.addEventListener('click', (e) => quantityPlus2(e.target.parentNode.dataset.name)));
+// removeBtn.addEventListener('click', clearInput2)
+
+
+
+
+
+
+
+
+

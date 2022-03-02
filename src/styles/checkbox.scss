@@ -42,7 +42,7 @@
   &+.checkbox__label::before, &+.checkbox__label--bold::before  {
     content: '';
     display: inline-block;
-    width: 18px;
+    min-width: 18px;
     height: 18px;
     border: 1px solid $dark25;
     border-radius: 4px;

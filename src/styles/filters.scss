@@ -1,14 +1,58 @@
 @import "variables";
 @import "mixins";
 
-.filters {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  max-width: 266px;
+.expandable-filters {
+  text-align: center;
+  cursor: pointer;
+
+  & p {
+    position: relative;
+    width: 100%;
+
+    &:after {
+      content: '\f1de';
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      margin-left: 15px;
+    }
+  }
+
+  @include tablet {
+    display: none;
+  }
 }
 
-.filters__text {
-  color: $dark50;
-  font-size: $h3;
-}
+  .filters {
+    display: none;
+
+    &--open {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      width: 100%;
+      flex-shrink: 0;
+      margin-bottom: 50px;
+    }
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      width: 100%;
+      flex-shrink: 0;
+      max-width: 266px;
+    }
+
+  }
+
+  .filters__text {
+    color: $dark50;
+    font-size: $h3;
+  }

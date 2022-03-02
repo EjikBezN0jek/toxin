@@ -1,0 +1,57 @@
+@import "variables";
+@import "mixins";
+
+
+.catalog-item {
+  min-width: 270px;
+  min-height: 257px;
+  background: white;
+  box-shadow: 0 10px 20px $dark5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+
+.catalog-item__desc {
+  padding: 20px;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.name__title {
+  font-weight: $bold;
+  font-size: $h2;
+
+  &--prefix {
+    font-size: $text;
+  }
+}
+
+.name__label {
+  text-transform: uppercase;
+  font-weight: $bold;
+  color: $purple;
+  font-size: $h3;
+}
+
+.value {
+  color: $dark50;
+  font-weight: $bold;
+
+  & span {
+    font-size: $h3;
+    font-weight: normal;
+  }
+}
+
+
+.catalog-item__reviews {
+  margin-top: 10px;
+  padding: 10px 0 0;
+  border-top: 1px solid $dark5;
+}
+

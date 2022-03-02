@@ -2,6 +2,9 @@
 
 <main>
     <div class="container catalog__container">
+        <div class="expandable-filters">
+            <p class="input__label">Фильтры</p>
+        </div>
         <div class="filters">
             <div class="datepicker__wrapper">
                 <p class="input__label">Даты пребывания в отеле</p>
@@ -54,7 +57,7 @@
                             class="range__price--max">15 000</span>₽</p>
                 </div>
                 <div class="range__controls" id="range"></div>
-                <p class="filters__text">Стоимость за сутки пребывания в номере</p>
+                <p class="filters__text range__text">Стоимость за сутки пребывания в номере</p>
             </div>
             <div class="checkbox">
                 <p class="input__label">Правила дома</p>
@@ -69,7 +72,7 @@
                     </div>
                     <div class="checkbox__item">
                         <input type="checkbox" id="checkbox-3" class="checkbox__input">
-                        <label for="checkbox-3" class="checkbox__label">Можно пригласить гостей<br>(до 10
+                        <label for="checkbox-3" class="checkbox__label">Можно пригласить гостей (до 10
                             человек)</label>
                     </div>
                 </div>
@@ -80,20 +83,20 @@
                     <div class="checkbox__item">
                         <input type="checkbox" id="checkbox__item-1" class="checkbox__input">
                         <label for="checkbox__item-1" class="checkbox__label">
-                            <span class="filters__text">
-                                <span class="checkbox__label--bold">Широкий коридор</span>
-                                <br>Ширина коридоров в номере<br>не  менее 91 см.
-                            </span>
+                            <div class="filters__text">
+                                <div class="checkbox__label--bold">Широкий коридор</div>
+                                Ширина коридоров в номере не  менее 91 см.
+                            </div>
                         </label>
                     </div>
 
                     <div class="checkbox__item">
                         <input type="checkbox" id="checkbox__item-2" class="checkbox__input">
                         <label for="checkbox__item-2" class="checkbox__label">
-                            <span class="filters__text">
-                                <span class="checkbox__label--bold">Помощник для инвалидов</span>
-                                <br>На 1 этаже вас встретит специалист<br>и проводит до номера.
-                            </span>
+                            <div class="filters__text">
+                                <div class="checkbox__label--bold">Помощник для инвалидов</div>
+                                На 1 этаже вас встретит специалист и проводит до номера.
+                            </div>
                         </label>
                     </div>
                 </div>
@@ -106,28 +109,28 @@
                 </div>
                 <div class="dropdown__list">
                     <div class="flex">
-                        <p class="input__label">Взрослые</p>
-                        <div class="quantity-block flex" data-name="adults">
+                        <p class="input__label">Спальни</p>
+                        <div class="quantity-block flex" data-name="bedrooms">
                             <button type="button" class="quantity-arrow-minus btn"> -</button>
-                            <span class="quantity-num quantity-num--adults"> 0 </span>
+                            <span class="quantity-num quantity-num--bedrooms"> 0 </span>
                             <button type="button" class="quantity-arrow-plus btn"> +</button>
                         </div>
                     </div>
 
                     <div class="flex">
-                        <p class="input__label"> Дети</p>
-                        <div class="quantity-block flex" data-name="children">
+                        <p class="input__label">Кровати</p>
+                        <div class="quantity-block flex" data-name="beds">
                             <button type="button" class="quantity-arrow-minus btn"> -</button>
-                            <span class="quantity-num quantity-num--children"> 0 </span>
+                            <span class="quantity-num quantity-num--beds"> 0 </span>
                             <button type="button" class="quantity-arrow-plus btn"> +</button>
                         </div>
                     </div>
 
                     <div class="flex">
-                        <p class="input__label"> Младенцы</p>
-                        <div class="quantity-block flex" data-name="babies">
+                        <p class="input__label">Ванные комнаты</p>
+                        <div class="quantity-block flex" data-name="bathrooms">
                             <button type="button" class="quantity-arrow-minus btn"> -</button>
-                            <span class="quantity-num quantity-num--babies"> 0 </span>
+                            <span class="quantity-num quantity-num--bathrooms"> 0 </span>
                             <button type="button" class="quantity-arrow-plus btn"> +</button>
                         </div>
                     </div>
@@ -139,15 +142,202 @@
 
                 </div>
             </div>
+            <div class="expandable-checkbox">
+                <p class="input__label expandable-checkbox__label">Дополнительные удобства</p>
+                <div class="expandable-checkbox__list">
+                    <input type="checkbox" id="expandable-checkbox-1" class="checkbox__input">
+                    <label for="expandable-checkbox-1" class="checkbox__label">Завтрак</label>
+
+                    <input type="checkbox" id="expandable-checkbox-2" class="checkbox__input">
+                    <label for="expandable-checkbox-2" class="checkbox__label">Письменный стол</label>
+
+                    <input type="checkbox" id="expandable-checkbox-3" class="checkbox__input">
+                    <label for="expandable-checkbox-3" class="checkbox__label">Стул для кормления</label>
+
+                    <input type="checkbox" id="expandable-checkbox-4" class="checkbox__input">
+                    <label for="expandable-checkbox-4" class="checkbox__label">Кроватка</label>
+
+                    <input type="checkbox" id="expandable-checkbox-5" class="checkbox__input">
+                    <label for="expandable-checkbox-5" class="checkbox__label">Телевизор</label>
+
+                    <input type="checkbox" id="expandable-checkbox-6" class="checkbox__input">
+                    <label for="expandable-checkbox-6" class="checkbox__label">Шампунь</label>
+                </div>
+            </div>
         </div>
         <div class="catalog__content">
             <p class="title">Номера, которые мы для вас подобрали</p>
+            <div class="catalog__list flex">
+                <div class="catalog-item">
+                    <div class="catalog__slider">
+                        <div class="slider__items">
+                            <div class="slider__item slider__item--selected">
+                                <img src="./img/room-thumb-1.png" alt=""  class="slider__img">
+                            </div>
+                            <div class="slider__item">
+                                <img src="./img/room-thumb-2.png" alt=""  class="slider__img">
+                            </div>
+                            <div class="slider__item">
+                                <img src="./img/room-thumb-3.png" alt=""  class="slider__img">
+                            </div>
+                            <div class="slider__item">
+                                <img src="./img/room-thumb-4.png" alt="" class="slider__img">
+                            </div>
+                        </div>
+                        <div class="slider__controls">
+                            <div class="slider__control--prev">
+                                <img src="./icons/slider-arrow.png" alt="">
+                            </div>
+                            <div class="slider__control--next">
+                                <img src="./icons/slider-arrow.png" alt="">
+                            </div>
+                        </div>
+                        <div class="slider__dots">
+                            <div class="dot dot--selected"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                    <div class="catalog-item__desc">
+                        <div class="catalog-item__info flex">
+                            <div class="name">
+                                <div class="name__title">
+                                    <span class="name__title--prefix">№</span> 888
+                                </div>
+                                <div class="name__label">Люкс</div>
+                            </div>
+                            <p class="value">9 990₽<span> в сутки</span></p>
+                        </div>
+                        <div class="catalog-item__reviews flex ">
+                            <div class="stars">
+                                <img src="icons/star_icon.png" alt="">
+                                <img src="icons/star_icon.png" alt="">
+                                <img src="icons/star_icon.png" alt="">
+                                <img src="icons/star_icon.png" alt="">
+                                <img src="icons/star_icon.png" alt="">
+                            </div>
+                            <p class="value">145<span> Отзывов</span></p>
+                        </div>
+                    </div>
+                </div>
+<!--                <div class="catalog-item">-->
+<!--                    <div class="catalog__slider">-->
+<!--                        <div class="slider__items">-->
+<!--                            <div class="slider__item slider__item&#45;&#45;selected">-->
+<!--                                <img src="./img/room-thumb-1.png" alt=""  class="slider__img">-->
+<!--                            </div>-->
+<!--                            <div class="slider__item">-->
+<!--                                <img src="./img/room-thumb-2.png" alt=""  class="slider__img">-->
+<!--                            </div>-->
+<!--                            <div class="slider__item">-->
+<!--                                <img src="./img/room-thumb-3.png" alt=""  class="slider__img">-->
+<!--                            </div>-->
+<!--                            <div class="slider__item">-->
+<!--                                <img src="./img/room-thumb-4.png" alt="" class="slider__img">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="slider__controls">-->
+<!--                            <div class="slider__control&#45;&#45;prev">-->
+<!--                                <img src="./icons/slider-arrow.png" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="slider__control&#45;&#45;next">-->
+<!--                                <img src="./icons/slider-arrow.png" alt="">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="slider__dots">-->
+<!--                            <div class="dot dot&#45;&#45;selected"></div>-->
+<!--                            <div class="dot"></div>-->
+<!--                            <div class="dot"></div>-->
+<!--                            <div class="dot"></div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="catalog-item__desc">-->
+<!--                        <div class="catalog-item__info flex">-->
+<!--                            <div class="name">-->
+<!--                                <div class="name__title">-->
+<!--                                    <span class="name__title&#45;&#45;prefix">№</span> 888-->
+<!--                                </div>-->
+<!--                                <div class="name__label">Люкс</div>-->
+<!--                            </div>-->
+<!--                            <p class="value">9 990₽<span> в сутки</span></p>-->
+<!--                        </div>-->
+<!--                        <div class="catalog-item__reviews flex ">-->
+<!--                            <div class="stars">-->
+<!--                                <img src="icons/star_icon.png" alt="">-->
+<!--                                <img src="icons/star_icon.png" alt="">-->
+<!--                                <img src="icons/star_icon.png" alt="">-->
+<!--                                <img src="icons/star_icon.png" alt="">-->
+<!--                                <img src="icons/star_icon.png" alt="">-->
+<!--                            </div>-->
+<!--                            <p class="value">145<span> Отзывов</span></p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="catalog-item">-->
+<!--                    <div class="catalog__slider">-->
+<!--                        <div class="slider__items">-->
+<!--                            <div class="slider__item slider__item&#45;&#45;selected">-->
+<!--                                <img src="./img/room-thumb-1.png" alt=""  class="slider__img">-->
+<!--                            </div>-->
+<!--                            <div class="slider__item">-->
+<!--                                <img src="./img/room-thumb-2.png" alt=""  class="slider__img">-->
+<!--                            </div>-->
+<!--                            <div class="slider__item">-->
+<!--                                <img src="./img/room-thumb-3.png" alt=""  class="slider__img">-->
+<!--                            </div>-->
+<!--                            <div class="slider__item">-->
+<!--                                <img src="./img/room-thumb-4.png" alt="" class="slider__img">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="slider__controls">-->
+<!--                            <div class="slider__control&#45;&#45;prev">-->
+<!--                                <img src="./icons/slider-arrow.png" alt="">-->
+<!--                            </div>-->
+<!--                            <div class="slider__control&#45;&#45;next">-->
+<!--                                <img src="./icons/slider-arrow.png" alt="">-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="slider__dots">-->
+<!--                            <div class="dot dot&#45;&#45;selected"></div>-->
+<!--                            <div class="dot"></div>-->
+<!--                            <div class="dot"></div>-->
+<!--                            <div class="dot"></div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="catalog-item__desc">-->
+<!--                        <div class="catalog-item__info flex">-->
+<!--                            <div class="name">-->
+<!--                                <div class="name__title">-->
+<!--                                    <span class="name__title&#45;&#45;prefix">№</span> 888-->
+<!--                                </div>-->
+<!--                                <div class="name__label">Люкс</div>-->
+<!--                            </div>-->
+<!--                            <p class="value">9 990₽<span> в сутки</span></p>-->
+<!--                        </div>-->
+<!--                        <div class="catalog-item__reviews flex ">-->
+<!--                            <div class="stars">-->
+<!--                                <img src="icons/star_icon.png" alt="">-->
+<!--                                <img src="icons/star_icon.png" alt="">-->
+<!--                                <img src="icons/star_icon.png" alt="">-->
+<!--                                <img src="icons/star_icon.png" alt="">-->
+<!--                                <img src="icons/star_icon.png" alt="">-->
+<!--                            </div>-->
+<!--                            <p class="value">145<span> Отзывов</span></p>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+            </div>
+
         </div>
 
     </div>
 </main>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"></script>
+<script src="expandable-checkbox.js"></script>
+<script src="slider.js"></script>
+<script src="filters.js"></script>
 <script src="datepicker.js"></script>
 <script src="dropdown.js"></script>
 <script src="range.js"></script>

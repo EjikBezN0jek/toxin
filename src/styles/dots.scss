@@ -1,0 +1,16 @@
+@import "variables";
+@import "mixins";
+
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background: transparent;
+  cursor: pointer;
+
+  &--selected {
+    background: white;
+  }
+}

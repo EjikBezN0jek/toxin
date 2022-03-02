@@ -1,0 +1,51 @@
+@import "variables";
+@import "mixins";
+
+
+.expandable-checkbox {
+  cursor: pointer;
+
+  & .input__label {
+    margin: 0;
+  }
+}
+
+.expandable-checkbox__list {
+  display: none;
+
+  &--open {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 17px;
+  }
+}
+
+.expandable-checkbox__label {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translate(0, -50%);
+    width: 15px;
+    height: 15px;
+    background: url("./icons/expand_more.png") no-repeat center;
+  }
+
+  &--open {
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      transform: rotate(180deg) translate(0, 50%);
+      width: 15px;
+      height: 15px;
+      background: url("./icons/expand_more.png") no-repeat center;
+    }
+  }
+}
