@@ -9,12 +9,12 @@
 
 .slider__items {
   display: flex;
+  min-width: 270px;
+  height: 152px;
 }
 
 .slider__item {
   display: none;
-  width: 270px;
-  height: 150px;
 
   &--selected {
     display: block;
@@ -33,29 +33,39 @@
 
 .slider__controls {
   position: absolute;
-  top: 50%;
+  top: 0;
   height: 152px;
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-.slider__control--prev {
-  transform: translate(0, -50%);
-  padding: 70px 15px;
+.slider__control {
+  position: relative;
   width: 42px;
   height: 100%;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
   cursor: pointer;
 
+  &--prev {
 
-}
+    & img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(0, -50%);
+    }
+  }
 
-.slider__control--next {
-  padding: 70px 15px;
-  width: 42px;
-  transform: translate(0, -50%) rotate(180deg) ;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
-  cursor: pointer;
+  &--next {
+    transform:  rotate(180deg) ;
 
+    & img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(0, -50%);
+    }
+
+  }
 }
