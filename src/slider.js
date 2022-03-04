@@ -4,6 +4,7 @@ class Slider {
     this.slider = slider;
     this.index = 0;
 
+
     this.slides = this.slider.querySelectorAll('.slider__item');
     if (hasControls) this.createControls();
     if (hasDots) this.createDots();

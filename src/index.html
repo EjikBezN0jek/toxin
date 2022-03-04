@@ -12,33 +12,33 @@
                 </div>
                 <div class="dateselector double flex"></div>
             </div>
-            <div class="dropdown">
+            <div class="dropdown js-dropdown">
                 <p class="dropdown__label input__label">Гости</p>
                 <div class="dropdown__input">
                     <input name="guests" class="guests-picker input" placeholder="Сколько гостей" readonly="readonly">
                 </div>
                 <div class="dropdown__list">
-                    <div class="flex">
+                    <div class="flex js-dropdown-item" data-name="adults">
                         <p class="input__label">Взрослые</p>
-                        <div class="quantity-block flex" data-name="adults">
+                        <div class="quantity-block flex">
                             <button type="button" class="quantity-arrow-minus btn"> -</button>
                             <span class="quantity-num quantity-num--adults"> 0 </span>
                             <button type="button" class="quantity-arrow-plus btn"> +</button>
                         </div>
                     </div>
 
-                    <div class="flex">
-                        <p class="input__label"> Дети</p>
-                        <div class="quantity-block flex" data-name="children">
+                    <div class="flex js-dropdown-item" data-name="children">
+                        <p class="input__label">Дети</p>
+                        <div class="quantity-block flex">
                             <button type="button" class="quantity-arrow-minus btn"> -</button>
                             <span class="quantity-num quantity-num--children"> 0 </span>
                             <button type="button" class="quantity-arrow-plus btn"> +</button>
                         </div>
                     </div>
 
-                    <div class="flex">
-                        <p class="input__label"> Младенцы</p>
-                        <div class="quantity-block flex" data-name="babies">
+                    <div class="flex js-dropdown-item" data-name="babies">
+                        <p class="input__label">Младенцы</p>
+                        <div class="quantity-block flex">
                             <button type="button" class="quantity-arrow-minus btn"> -</button>
                             <span class="quantity-num quantity-num--babies"> 0 </span>
                             <button type="button" class="quantity-arrow-plus btn"> +</button>
