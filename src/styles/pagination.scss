@@ -1,0 +1,86 @@
+@import "variables";
+@import "mixins";
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination__control {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: $secondary-gradient;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &--prev {
+    display: none;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(180deg);
+      width: 15px;
+      height: 15px;
+      background: url("./icons/arrow.svg") no-repeat center;
+    }
+  }
+
+  &--next {
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 15px;
+      height: 15px;
+      background: url("./icons/arrow.svg") no-repeat center;
+    }
+  }
+}
+
+.pagination__list {
+  display: flex;
+}
+
+.pagination__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: $dark50;
+
+  &:hover {
+    font-weight: $bold;
+    color: white;
+    background: $gradient;
+    opacity: 0.5;
+  }
+
+  &--active {
+    font-weight: $bold;
+    color: white;
+    background: $gradient;
+  }
+}
+
+.pagination__desc {
+  margin-top: 10px;
+}

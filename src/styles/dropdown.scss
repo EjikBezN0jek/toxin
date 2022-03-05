@@ -8,7 +8,6 @@
 
 .dropdown__input {
   position: relative;
-  cursor: pointer;
 
   &:after {
     content: '';
@@ -22,7 +21,7 @@
   }
 
   &--open {
-    & > .guests-picker  {
+    & > .dropdown__picker  {
       border: 1px solid $dark75;
     }
 
@@ -39,9 +38,8 @@
   }
 }
 
-.guests-picker {
+.dropdown__picker {
   position: relative;
-  cursor: pointer;
 
   &::placeholder {
     color: $dark25;
@@ -56,7 +54,7 @@
 .dropdown__list {
   display: none;
   width: 100%;
-  padding: 15px;
+  padding: 7px 7px 15px 15px;
   border: 1px solid $dark75;
   border-radius: 0 0 4px 4px;
   background: white;

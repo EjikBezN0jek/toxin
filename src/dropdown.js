@@ -33,7 +33,7 @@ class Dropdown {
 
     this.dropdownInput = this.dropdown.querySelector('.dropdown__input');
     this.dropdownList = this.dropdown.querySelector('.dropdown__list');
-    this.guestsPicker = this.dropdown.querySelector('.guests-picker');
+    this.dropdownPicker = this.dropdown.querySelector('.dropdown__picker');
     this.removeBtn = this.dropdown.querySelector('.remove__btn');
     this.applyBtn = this.dropdown.querySelector('.apply__btn');
 
@@ -64,18 +64,18 @@ class Dropdown {
   change({name, value}) {
     this.state[name].value = value;
     let string = Object.values(this.state).map(item => item.value ? item.value + ' ' + item.label + ', ': '').join('');
-    this.guestsPicker.value = string.slice(0, string.length - 2);
-    this.removeBtn.style.display = this.guestsPicker.value ? 'block' : 'none';
+    this.dropdownPicker.value = string.slice(0, string.length - 2);
+    this.removeBtn.style.display = this.dropdownPicker.value ? 'block' : 'none';
   }
 
   toggle() {
     this.dropdownInput.classList.toggle('dropdown__input--open');
     this.dropdownList.classList.toggle('dropdown__list--open');
-    this.guestsPicker.classList.toggle('guests-picker--open');
+    this.dropdownPicker.classList.toggle('dropdown__picker--open');
   }
 
   clear() {
-    this.guestsPicker.value = '';
+    this.dropdownPicker.value = '';
     this.removeBtn.style.display = 'none';
     document.dispatchEvent(new CustomEvent('clearDropdown'))
   }

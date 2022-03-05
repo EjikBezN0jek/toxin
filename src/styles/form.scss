@@ -35,10 +35,12 @@
 
 .input {
   width: 100%;
-  padding: 10px 15px;
+  padding: 10px 30px 10px 15px;
   border: 1px solid $dark25;
   border-radius: 4px;
   outline: none;
+  cursor: pointer;
+  text-overflow: ellipsis;
 
   &::placeholder {
     color: $dark25;
