@@ -1,9 +1,10 @@
 class DropdownItem {
 
-  constructor(dropdownItem, name) {
+  constructor(dropdownItem, name, parentDropdown) {
     this.value = 0;
     this.name = name
     this.dropdownItem = dropdownItem;
+    this.parentDropdown = parentDropdown;
     this.quantityArrowMinus = this.dropdownItem.querySelector('.quantity-arrow-minus');
     this.quantityArrowPlus = this.dropdownItem.querySelector('.quantity-arrow-plus');
     this.quantityNum = this.dropdownItem.querySelector('.quantity-num');
@@ -21,7 +22,7 @@ class DropdownItem {
     if (value < 0) return;
     this.value = value;
     this.quantityNum.innerHTML = this.value;
-    document.dispatchEvent(new CustomEvent('changedDropdownValue', {detail: {name: this.name, value: this.value}}))
+    this.parentDropdown.dispatchEvent(new CustomEvent('changedDropdownValue', {detail: {name: this.name, value: this.value}}))
   }
 }
 
@@ -46,7 +47,7 @@ class Dropdown {
     dropdownItems.forEach(dropdownItemNode => {
       let label = dropdownItemNode.querySelector('.input__label').innerHTML.toLowerCase();
       this.state[dropdownItemNode.dataset.name] = {label, value: 0}
-      new DropdownItem(dropdownItemNode, dropdownItemNode.dataset.name)
+      new DropdownItem(dropdownItemNode, dropdownItemNode.dataset.name, this.dropdown)
     })
   }
 
@@ -55,7 +56,7 @@ class Dropdown {
     this.applyBtn.addEventListener('click',() =>  this.toggle());
     this.removeBtn.addEventListener('click',() =>  this.clear());
 
-    document.addEventListener('changedDropdownValue', e => this.change(e.detail))
+    this.dropdown.addEventListener('changedDropdownValue', e => this.change(e.detail))
     window.addEventListener('click',  (e) => !this.dropdown?.contains(e.target)
       && this.dropdownList.classList.contains('dropdown__list--open')
       && this.toggle())

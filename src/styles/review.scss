@@ -1,0 +1,76 @@
+@import "variables";
+@import "mixins";
+
+.reviews__container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.reviews__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reviews__count {
+  color: $dark50;
+}
+
+.reviews__item {
+  display: grid;
+  grid: 48px 1fr/48px 1fr;
+  grid-row-gap: 12px;
+  grid-column-gap: 10px;
+}
+
+.reviews__avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+  filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
+}
+
+.reviews__title {
+  align-self: center;
+
+  &--name {
+    font-weight: $bold;
+  }
+}
+
+.reviews__likes {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid $dark25;
+  text-transform: none;
+  font-weight: normal;
+  font-size: 10px;
+  color: $dark25;
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: url("./icons/favorite_border.png") no-repeat center;
+  }
+
+  &--active {
+    border: 1px solid $purple;
+    color: $purple;
+
+    &:before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: url("./icons/like_icon.png") no-repeat center;
+    }
+  }
+}

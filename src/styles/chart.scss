@@ -1,0 +1,51 @@
+@import "variables";
+@import "mixins";
+
+
+.chart {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.chart__content {
+  width: 159px;
+  margin-right: 20px;
+}
+
+.chart__text {
+  font-family: Montserrat,"sans-serif";
+  font-weight: $bold;
+  fill: $purple;
+  text-anchor: middle;
+
+  &--title{
+    font-size: 0.4em;
+  }
+
+  &--subtitle {
+    font-size: 0.225em;
+    text-transform: uppercase;
+  }
+}
+
+.chart__legend-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chart__legend-item {
+  &:not(:last-child){
+    margin-bottom: 14px;
+  }
+}
+
+.chart__legend-color {
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 50%;
+
+}
+

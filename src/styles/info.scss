@@ -1,0 +1,25 @@
+@import "variables";
+@import "mixins";
+
+
+.info__title {
+  color: $dark75;
+  font-weight: $bold;
+}
+
+.info__item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 20px 0;
+
+  &:not(:last-child){
+    border-bottom: 1px solid $dark5;
+  }
+}
+
+.info__desc {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
