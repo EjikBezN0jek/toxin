@@ -6,6 +6,51 @@
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 30px;
-  width: 380px;
-  height: 512px;
+
+  @include tablet {
+    width: 380px;
+  }
+
+}
+
+.book__header {
+  margin-bottom: 20px;
+}
+
+.book__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.name__title {
+  font-size: $h1;
+}
+
+.input__label {
+  color: $dark100;
+}
+
+.book__options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.book__total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.book__total-label, .book__total-price {
+  font-size: $h2;
+  font-weight: $bold;
+  color: $dark100;
+  white-space: nowrap;
+}
+
+.book__total-divider {
+  margin: 5px;
+  width: 100%;
+  border-bottom: 1px dotted $dark25;
 }

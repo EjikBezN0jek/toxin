@@ -10,11 +10,24 @@
 }
 
 .header__menu {
-  display: none;
-  padding: 0;
+  position: fixed;
+  top: 72px;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  padding: 20px;
+  background: white;
+  z-index: 100;
+  transition: .4s;
 
   @include tablet {
     display: flex;
+    position: relative;
+    width: auto;
+    top: 0;
+    left: 0;
+    padding: 0;
+    transition: .0s;
   }
 
   @include desktop {
@@ -23,6 +36,10 @@
 
   & .menu__item:not(:last-child){
     margin-right: 20px;
+  }
+
+  &--open {
+    transform: translateX(300px);
   }
 }
 
@@ -36,4 +53,19 @@
 
 .header__btn {
   margin-left: 20px;
+}
+
+.header__overlay {
+  display: none;
+
+  &--visible {
+    position: fixed;
+    top: 73px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: $dark25;
+    z-index: 50;
+  }
 }

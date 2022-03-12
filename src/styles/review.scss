@@ -9,11 +9,18 @@
 
 .reviews__header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+
+  @include tablet {
+    align-items: start;
+    justify-content: space-between;
+  }
+
 }
 
 .reviews__count {
+  font-size: $text;
+  font-weight: normal;
   color: $dark50;
 }
 

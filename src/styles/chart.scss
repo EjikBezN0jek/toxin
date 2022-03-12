@@ -8,8 +8,14 @@
   align-items: center;
 }
 .chart__content {
-  width: 159px;
-  margin-right: 20px;
+  width: 139px;
+  margin-right: 10px;
+
+  @include tablet {
+    width: 159px;
+    margin-right: 20px;
+  }
+
 }
 
 .chart__text {
@@ -36,7 +42,12 @@
 
 .chart__legend-item {
   &:not(:last-child){
-    margin-bottom: 14px;
+    margin-bottom: 5px;
+
+    @include tablet {
+      margin-bottom: 14px;
+    }
+
   }
 }
 

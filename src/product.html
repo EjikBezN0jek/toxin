@@ -102,37 +102,40 @@
                     </div>
                 </div>
             </div>
-            <div class="reviews__container">
-                <div class="reviews__header">
-                    <p class="product__title">Отзывы посетителей номера</p>
-                    <p class="reviews__count">2 отзыва</p>
-                </div>
-                <div class="reviews__item review">
-                    <img src="./img/murad.jpg" alt="" class="reviews__avatar">
-                    <div class="reviews__title">
-                        <p class="reviews__title--name">Мурад Сарафанов</p>
-                        <p class="reviews__title--date">5 дней назад</p>
+            <div class="reviews">
+                <p class="reviews__header product__title">Отзывы посетителей номера
+                    <span class="reviews__count">2 отзыва</span>
+                </p>
+                <div class="reviews__container">
+
+                    <div class="reviews__item review">
+                        <img src="./img/murad.jpg" alt="" class="reviews__avatar">
+                        <div class="reviews__title">
+                            <p class="reviews__title--name">Мурад Сарафанов</p>
+                            <p class="reviews__title--date">5 дней назад</p>
+                        </div>
+                        <button type="button" class="reviews__likes reviews__likes--active btn">12</button>
+                        <p class="reviews__text">
+                            Великолепный матрас на кровати в основной спальне!
+                            А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.
+                            Выкрикивал комплименты повару — никто не жаловался из соседей.
+                        </p>
                     </div>
-                    <button type="button" class="reviews__likes reviews__likes--active btn">12</button>
-                    <p class="reviews__text">
-                        Великолепный матрас на кровати в основной спальне!
-                        А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие.
-                        Выкрикивал комплименты повару — никто не жаловался из соседей.
-                    </p>
-                </div>
-                <div class="reviews__item review">
-                    <img src="./img/patricia.jpg" alt="" class="reviews__avatar">
-                    <div class="reviews__title">
-                        <p class="reviews__title--name">Патрисия Стёклышкова</p>
-                        <p class="reviews__title--date">Неделю назад</p>
+                    <div class="reviews__item review">
+                        <img src="./img/patricia.jpg" alt="" class="reviews__avatar">
+                        <div class="reviews__title">
+                            <p class="reviews__title--name">Патрисия Стёклышкова</p>
+                            <p class="reviews__title--date">Неделю назад</p>
+                        </div>
+                        <button type="button" class="reviews__likes btn">2</button>
+                        <p class="reviews__text">
+                            Обслуживание на высоте! Всё аккуратно, чисто.
+                            Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент
+                        </p>
                     </div>
-                    <button type="button" class="reviews__likes btn">2</button>
-                    <p class="reviews__text">
-                        Обслуживание на высоте! Всё аккуратно, чисто.
-                        Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент
-                    </p>
                 </div>
             </div>
+
             <div class="product__row">
                 <div class="product__rules">
                     <p class="product__title">Правила</p>
@@ -140,7 +143,8 @@
                         <li class="bulletlist__item">Нельзя с питомцами</li>
                         <li class="bulletlist__item">Без вечеринок и мероприятий</li>
                         <li class="bulletlist__item">Время прибытия — после 13:00,
-                            а выезд до 12:00</li>
+                            а выезд до 12:00
+                        </li>
                     </ul>
                 </div>
 
@@ -155,7 +159,7 @@
         </div>
         <div class="product__book book">
             <div class="book__container">
-                <div class="catalog-item__info flex">
+                <div class="book__header flex">
                     <div class="name">
                         <a href="./product.html" class="name__title link">
                             <span class="name__title--prefix">№</span> 888
@@ -164,10 +168,86 @@
                     </div>
                     <p class="value">9 990₽<span> в сутки</span></p>
                 </div>
+                <form class="book__form">
+                    <div class="datepicker__wrapper">
+                        <div class="datepicker__labels flex">
+                            <p class="datepicker__label input__label">Прибытие</p>
+                            <p class="datepicker__label input__label">Выезд</p>
+                        </div>
+                        <div class="dateselector double flex"></div>
+                    </div>
+                    <div class="dropdown js-dropdown">
+                        <p class="dropdown__label input__label">Гости</p>
+                        <div class="dropdown__input">
+                            <input class="dropdown__picker input" placeholder="Сколько гостей" readonly="readonly">
+                        </div>
+                        <div class="dropdown__list">
+                            <div class="flex js-dropdown-item" data-name="adults">
+                                <p class="input__label">Взрослые</p>
+                                <div class="quantity-block flex">
+                                    <button type="button" class="quantity-arrow-minus btn"> -</button>
+                                    <span class="quantity-num"> 0 </span>
+                                    <button type="button" class="quantity-arrow-plus btn"> +</button>
+                                </div>
+                            </div>
+
+                            <div class="flex js-dropdown-item" data-name="children">
+                                <p class="input__label">Дети</p>
+                                <div class="quantity-block flex">
+                                    <button type="button" class="quantity-arrow-minus btn"> -</button>
+                                    <span class="quantity-num"> 0 </span>
+                                    <button type="button" class="quantity-arrow-plus btn"> +</button>
+                                </div>
+                            </div>
+
+                            <div class="flex js-dropdown-item" data-name="babies">
+                                <p class="input__label">Младенцы</p>
+                                <div class="quantity-block flex">
+                                    <button type="button" class="quantity-arrow-minus btn"> -</button>
+                                    <span class="quantity-num"> 0 </span>
+                                    <button type="button" class="quantity-arrow-plus btn"> +</button>
+                                </div>
+                            </div>
+
+                            <div class="dropdown__buttons flex">
+                                <button type="button" class="action__btn remove__btn btn">Очистить</button>
+                                <button type="button" class="action__btn apply__btn btn">Применить</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="book__options">
+                        <div class="book__options-item flex">
+                            <div class="book__options-label">9 990₽ х 4 суток</div>
+                            <div class="ook__options-price">39 960₽</div>
+                        </div>
+                        <div class="book__options-item flex">
+                            <div class="book__options-label">Сбор за услуги: скидка 2 179₽</div>
+                            <div class="ook__options-price">0₽</div>
+                        </div>
+                        <div class="book__options-item flex">
+                            <div class="book__options-label">Сбор за дополнительные услуги</div>
+                            <div class="ook__options-price">300₽</div>
+                        </div>
+                    </div>
+                    <div class="book__total">
+                        <div class="book__total-label">Итого</div>
+                        <div class="book__total-divider"></div>
+                        <div class="book__total-price">38 081₽</div>
+                    </div>
+                    <button type="button" class="form__btn btn--fill btn">
+                        Забронировать
+                        <img src="icons/arrow.svg" alt="" class="arrow__btn">
+                    </button>
+
+                </form>
+
             </div>
         </div>
-
     </div>
 </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"></script>
+<script src="datepicker.js"></script>
+<script src="dropdown.js"></script>
 <script src="reviews.js"></script>
 @@include('footer.html')
