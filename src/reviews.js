@@ -12,5 +12,4 @@ function toggleLike(btn) {
 
 }
 
-
 likeButtons.forEach(btn => btn.addEventListener('click', (e) => toggleLike(e.target)))

@@ -1,15 +1,25 @@
 class DropdownItem {
 
-  constructor(dropdownItem, name, parentDropdown) {
+  constructor(dropdownItem, parentDropdown) {
     this.value = 0;
-    this.name = name
     this.dropdownItem = dropdownItem;
     this.parentDropdown = parentDropdown;
+    this.createItem()
+    this.setListeners();
+  }
+
+  createItem() {
+    this.dropdownItem.insertAdjacentHTML('beforeend', `
+        <p class="input__label">${this.dropdownItem.dataset.label}</p>
+        <div class="quantity-block flex">
+            <button type="button" class="quantity-arrow-minus btn">-</button>
+            <span class="quantity-num">${this.value}</span>
+            <button type="button" class="quantity-arrow-plus btn">+</button>
+        </div>
+    `);
     this.quantityArrowMinus = this.dropdownItem.querySelector('.quantity-arrow-minus');
     this.quantityArrowPlus = this.dropdownItem.querySelector('.quantity-arrow-plus');
     this.quantityNum = this.dropdownItem.querySelector('.quantity-num');
-
-    this.setListeners();
   }
 
   setListeners() {
@@ -22,7 +32,7 @@ class DropdownItem {
     if (value < 0) return;
     this.value = value;
     this.quantityNum.innerHTML = this.value;
-    this.parentDropdown.dispatchEvent(new CustomEvent('changedDropdownValue', {detail: {name: this.name, value: this.value}}))
+    this.parentDropdown.dispatchEvent(new CustomEvent('changedDropdownValue', {detail: {name: this.dropdownItem.dataset.name, value: this.value}}))
   }
 }
 
@@ -45,9 +55,10 @@ class Dropdown {
   setState() {
     let dropdownItems = this.dropdown.querySelectorAll('.js-dropdown-item');
     dropdownItems.forEach(dropdownItemNode => {
-      let label = dropdownItemNode.querySelector('.input__label').innerHTML.toLowerCase();
-      this.state[dropdownItemNode.dataset.name] = {label, value: 0}
-      new DropdownItem(dropdownItemNode, dropdownItemNode.dataset.name, this.dropdown)
+      let name = dropdownItemNode.dataset.name;
+      let label = dropdownItemNode.dataset.label?.toLowerCase();
+      this.state[name] = { label, value: 0 }
+      new DropdownItem(dropdownItemNode, this.dropdown)
     })
   }
 

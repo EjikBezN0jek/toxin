@@ -29,9 +29,14 @@
 .product__container {
   padding: 70px 20px;
   display: flex;
+  flex-direction: column-reverse;
   gap: 70px;
   color: $dark75;
   line-height: 24px;
+
+  @include tablet {
+    flex-direction: row;
+  }
 }
 
 .product__title {

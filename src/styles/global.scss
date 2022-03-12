@@ -30,6 +30,10 @@ body {
   padding: 0;
   min-width: 320px;
   line-height: 1;
+
+  &.hidden {
+    overflow: hidden;
+  }
 }
 
 main {
