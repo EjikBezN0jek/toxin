@@ -34,7 +34,7 @@
   color: $dark75;
   line-height: 24px;
 
-  @include tablet {
+  @include desktop {
     flex-direction: row;
   }
 }
@@ -49,6 +49,7 @@
 .product__details {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 30px;
 }
 
@@ -97,4 +98,9 @@
 
 
 .product__book {
+  align-self: center;
+
+  @include desktop {
+    align-self: normal;
+  }
 }

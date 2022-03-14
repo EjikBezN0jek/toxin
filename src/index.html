@@ -18,32 +18,9 @@
                     <input class="dropdown__picker input" placeholder="Сколько гостей" readonly="readonly">
                 </div>
                 <div class="dropdown__list">
-                    <div class="flex js-dropdown-item" data-name="adults">
-                        <p class="input__label">Взрослые</p>
-                        <div class="quantity-block flex">
-                            <button type="button" class="quantity-arrow-minus btn"> - </button>
-                            <span class="quantity-num"> 0 </span>
-                            <button type="button" class="quantity-arrow-plus btn"> + </button>
-                        </div>
-                    </div>
-
-                    <div class="flex js-dropdown-item" data-name="children">
-                        <p class="input__label">Дети</p>
-                        <div class="quantity-block flex">
-                            <button type="button" class="quantity-arrow-minus btn"> - </button>
-                            <span class="quantity-num"> 0 </span>
-                            <button type="button" class="quantity-arrow-plus btn"> + </button>
-                        </div>
-                    </div>
-
-                    <div class="flex js-dropdown-item" data-name="babies">
-                        <p class="input__label">Младенцы</p>
-                        <div class="quantity-block flex">
-                            <button type="button" class="quantity-arrow-minus btn"> - </button>
-                            <span class="quantity-num"> 0 </span>
-                            <button type="button" class="quantity-arrow-plus btn"> + </button>
-                        </div>
-                    </div>
+                    <div class="flex js-dropdown-item" data-name="adults" data-label="Взрослые"></div>
+                    <div class="flex js-dropdown-item" data-name="children" data-label="Дети"></div>
+                    <div class="flex js-dropdown-item" data-name="babies" data-label="Младенцы"></div>
 
                     <div class="dropdown__buttons flex">
                         <button type="button" class="action__btn remove__btn btn">Очистить</button>

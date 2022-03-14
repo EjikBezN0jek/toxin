@@ -8,8 +8,8 @@
   align-items: center;
 }
 .chart__content {
-  width: 139px;
-  margin-right: 10px;
+  width: 130px;
+  margin-right: 5px;
 
   @include tablet {
     width: 159px;
@@ -38,6 +38,11 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size: $h3;
+
+  @include tablet {
+    font-size: $text;
+  }
 }
 
 .chart__legend-item {
