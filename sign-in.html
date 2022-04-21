@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Toxin</title>
+</head>
+<body>
+<div class="header">
+    <ul class="header__container container flex">
+        <button type="button" class="burger btn"></button>
+        <a href="./index.html" class="logo"><img src="./img/logo.svg" alt="logo"></a>
+        <ul class="header__menu  menu">
+            <li class="menu__item"><a href="./index.html" class="menu__link link">О нас</a></li>
+            <li class="menu__item menu__item--dropdown">
+                <a href="./catalog.html" class="menu__link link">Каталог
+                    <img src="./icons/expand_more.png" alt="" class="link__item">
+                </a>
+                <ul class="menu__dropdown">
+                    <li class="menu__dropdown-item"><a href="" class="menu__dropdown-link link">Lorem</a></li>
+                    <li class="menu__dropdown-item"><a href="" class="menu__dropdown-link link">Ipsum</a></li>
+                    <li class="menu__dropdown-item"><a href="" class="menu__dropdown-link link">Dolor</a></li>
+                    <li class="menu__dropdown-item"><a href="" class="menu__dropdown-link link">Sit</a></li>
+                    <li class="menu__dropdown-item"><a href="" class="menu__dropdown-link link">Amet</a></li>
+                </ul>
+            </li>
+            <li class="menu__item"><a href="" class="menu__link link">Новости</a></li>
+            <li class="menu__item"><a href="" class="menu__link link">Вакансии</a></li>
+            <li class="menu__item menu__item--dropdown">
+                <a href="" class="menu__link link">Соглашения
+                    <img src="./icons/expand_more.png" alt="" class="link__item">
+                </a>
+                <ul class="menu__dropdown">
+                    <li class="menu__dropdown-item"><a href="" class="menu__dropdown-link link">Consectetur</a></li>
+                    <li class="menu__dropdown-item"><a href="" class="menu__dropdown-link link">Sit amet</a></li>
+                    <li class="menu__dropdown-item"><a href="" class="menu__dropdown-link link">Dolor</a></li>
+                    <li class="menu__dropdown-item"><a href="" class="menu__dropdown-link link">Ipsum</a></li>
+                    <li class="menu__dropdown-item"><a href="" class="menu__dropdown-link link">Lorem</a></li>
+                </ul>
+            </li>
+        </ul>
+        <a href="sign-in.html" class="login-btn"><i class="fas fa-solid fa-user"></i></a>
+        <div class="header__buttons">
+            <a href="sign-in.html" class="header__btn btn--ghost btn link sign__btn">Войти</a>
+            <a href="sign-in.html?sign=up" class="header__btn  btn--fill btn link">Зарегистрироваться</a>
+        </div>
+    </ul>
+    <div class="header__overlay"></div>
+</div>
+
+<main class="sign-in__main">
+    <div class="sign-in__container container">
+        <form class="form sign-in__form show" method= 'post' action="https://echo.htmlacademy.ru">
+            <p class="form__title title">Войти</p>
+            <div class="input__wrapper">
+                <input type="email" class="sign-in__input input" placeholder="Email" name="email" required>
+                <input type="password" class="sign-in__input input" placeholder="Пароль" name="password" required
+                       pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-z]).{8,}$"
+                       title="Добавьте как минимум 1 заглавную букву, 1 строчную букву и 1 цифру">
+            </div>
+            <button type="submit" class="form__btn btn--fill btn">
+                Войти
+                <img src="icons/arrow.svg" alt="" class="arrow__btn">
+            </button>
+            <div class="flex">
+                <p>Нет аккаунта на Toxin?</p>
+                <button type="button" class="btn--ghost btn sign__btn">Создать</button>
+            </div>
+        </form>
+        <form class="form registration__form" method= 'post' action="https://echo.htmlacademy.ru">
+            <p class="form__title title">Регистрация аккаунта</p>
+            <div class="input__wrapper">
+                <input type="text" class="sign-in__input input" placeholder="Имя" name="name" minlength="2" maxlength="50" required>
+                <input type="text" class="sign-in__input input" placeholder="Фамилия" name="surname" minlength="2" maxlength="50" required>
+                <div class="radio__buttons">
+                    <div class="radio__item">
+                        <input type="radio" id="radio-1" value="Мужчина" name="sex" checked class="radio__input">
+                        <label for="radio-1" class="radio__label">Мужчина</label>
+                    </div>
+                    <div class="radio__item">
+                        <input type="radio" id="radio-2" value="Женщина" name="sex" class="radio__input">
+                        <label for="radio-2" class="radio__label">Женщина</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="wrapper">
+                <p class="input__label">Дата рождения</p>
+                <input type="text" placeholder="ДД.ММ.ГГ" class="input" name="date" required
+                       pattern="(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d">
+            </div>
+            <div class="input__wrapper">
+                <div class="wrapper">
+                    <p class="input__label">Данные для входа в сервис</p>
+                    <input type="email" class="sign-in__input input" placeholder="Email" name="email" required>
+                </div>
+                <input type="password" class="sign-in__input input" placeholder="Пароль" name="password" required
+                       pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-z]).{8,}$"
+                       title="Добавьте как минимум 1 заглавную букву, 1 строчную букву и 1 цифру">
+                <div class="switch">
+                    <input type="checkbox" class="toggle__btn" name="special_offers">
+                    <p class="switch__text">Получать спецпредложения</p>
+                </div>
+            </div>
+            <button type="submit" class="form__btn btn--fill btn">
+                Зарегистрироваться
+                <img src="icons/arrow.svg" alt="" class="arrow__btn">
+            </button>
+            <div class="flex">
+                <p>Уже есть аккаунт на Toxin</p>
+                <button type="button" class="btn--ghost btn sign__btn" >Войти</button>
+            </div>
+        </form>
+    </div>
+</main>
+
+<script src="sign.js"></script>
+
+<div class="footer">
+    <div class="footer__container container">
+
+        <div class="footer__logo">
+            <a href="./index.html" class="logo"><img src="./img/logo.svg" alt="logo"></a>
+            <p class="footer__text">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные
+                взгляды»</p>
+        </div>
+
+        <div class="footer__menu">
+            <div class="footer__menu-column">
+                <p class="footer__title">Навигация</p>
+                <ul class="footer__menu-list">
+                    <li class="menu__item"><a href="./index.html" class="menu__link link">О нас</a></li>
+                    <li class="menu__item"><a href="./catalog.html" class="menu__link link">Каталог</a></li>
+                    <li class="menu__item"><a href="" class="menu__link link">Новости</a></li>
+                    <li class="menu__item"><a href="" class="menu__link link">Служба поддержки</a></li>
+                </ul>
+            </div>
+            <div class="footer__menu-column">
+                <p class="footer__title">О нас</p>
+                <ul class="footer__menu-list">
+                    <li class="menu__item"><a href="" class="menu__link link">О сервисе</a></li>
+                    <li class="menu__item"><a href="" class="menu__link link">Наша команда</a></li>
+                    <li class="menu__item"><a href="" class="menu__link link">Вакансии</a></li>
+                    <li class="menu__item"><a href="" class="menu__link link">Инвесторы</a></li>
+                </ul>
+            </div>
+            <div class="footer__menu-column">
+                <p class="footer__title">Служба поддержки</p>
+                <ul class="footer__menu-list">
+                    <li class="menu__item"><a href="./index.html" class="menu__link link">Соглашения</a></li>
+                    <li class="menu__item"><a href="./catalog.html" class="menu__link link">Сообщества</a></li>
+                    <li class="menu__item"><a href="" class="menu__link link">Связь с нами</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__subscription">
+            <p class="footer__title">Подписка</p>
+            <p class="footer__text">Получайте специальные предложения и новости сервиса</p>
+            <form class="footer__form">
+                <input type="email" placeholder="Email" class="input" name="email" required>
+                <button type="submit" class="input__btn btn">
+                    <img src="icons/arrow_purple.svg" alt="">
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="copyright__container container">
+            <p class="copyright__text">Copyright © 2018 Toxin отель. Все права защищены.</p>
+            <div class="socials">
+                <a href="" class="socials__item link">
+                    <img src="./icons/twitter_logo.png" alt="twitter">
+                </a>
+                <a href="" class="socials__item link">
+                    <img src="./icons/facebook_logo.png" alt="facebook">
+                </a>
+                <a href="" class="socials__item link">
+                    <img src="./icons/inst_logo.png" alt="instagram">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

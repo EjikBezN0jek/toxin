@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Toxin</title>
+</head>
+<body>
+<div class="header">
+    <ul class="header__container container flex">
+        <button type="button" class="burger btn"></button>
+        <a href="./index.html" class="logo"><img src="./img/logo.svg" alt="logo"></a>
+        <ul class="header__menu  menu">
+            <li class="menu__item"><a href="./index.html" class="menu__link link">О нас</a></li>
+            <li class="menu__item menu__item--dropdown">
+                <a href="./catalog.html" class="menu__link link">Каталог
+                    <img src="./icons/expand_more.png" alt="" class="link__item">
+                </a>
+                <ul class="menu__dropdown">
+                    <li class="menu__dropdown-item"><a href="" class="menu__dropdown-link link">Lorem</a></li>
+                    <li class="menu__dropdown-item"><a href="" class="menu__dropdown-link link">Ipsum</a></li>
+                    <li class="menu__dropdown-item"><a href="" class="menu__dropdown-link link">Dolor</a></li>
+                    <li class="menu__dropdown-item"><a href="" class="menu__dropdown-link link">Sit</a></li>
+                    <li class="menu__dropdown-item"><a href="" class="menu__dropdown-link link">Amet</a></li>
+                </ul>
+            </li>
+            <li class="menu__item"><a href="" class="menu__link link">Новости</a></li>
+            <li class="menu__item"><a href="" class="menu__link link">Вакансии</a></li>
+            <li class="menu__item menu__item--dropdown">
+                <a href="" class="menu__link link">Соглашения
+                    <img src="./icons/expand_more.png" alt="" class="link__item">
+                </a>
+                <ul class="menu__dropdown">
+                    <li class="menu__dropdown-item"><a href="" class="menu__dropdown-link link">Consectetur</a></li>
+                    <li class="menu__dropdown-item"><a href="" class="menu__dropdown-link link">Sit amet</a></li>
+                    <li class="menu__dropdown-item"><a href="" class="menu__dropdown-link link">Dolor</a></li>
+                    <li class="menu__dropdown-item"><a href="" class="menu__dropdown-link link">Ipsum</a></li>
+                    <li class="menu__dropdown-item"><a href="" class="menu__dropdown-link link">Lorem</a></li>
+                </ul>
+            </li>
+        </ul>
+        <a href="sign-in.html" class="login-btn"><i class="fas fa-solid fa-user"></i></a>
+        <div class="header__buttons">
+            <a href="sign-in.html" class="header__btn btn--ghost btn link sign__btn">Войти</a>
+            <a href="sign-in.html?sign=up" class="header__btn  btn--fill btn link">Зарегистрироваться</a>
+        </div>
+    </ul>
+    <div class="header__overlay"></div>
+</div>
+
+<main class="index__main">
+    <div class="index__slider"></div>
+    <div class="index__container container">
+        <form class="form">
+            <p class="form__title title">Найдём номера под ваши пожелания</p>
+            <div class="datepicker__wrapper">
+                <div class="datepicker__labels flex">
+                    <p class="datepicker__label input__label">Прибытие</p>
+                    <p class="datepicker__label input__label">Выезд</p>
+                </div>
+                <div class="dateselector double flex"></div>
+            </div>
+            <div class="dropdown js-dropdown">
+                <p class="dropdown__label input__label">Гости</p>
+                <div class="dropdown__input">
+                    <input class="dropdown__picker input" placeholder="Сколько гостей" readonly="readonly">
+                </div>
+                <div class="dropdown__list">
+                    <div class="flex js-dropdown-item" data-name="adults" data-label="Взрослые"></div>
+                    <div class="flex js-dropdown-item" data-name="children" data-label="Дети"></div>
+                    <div class="flex js-dropdown-item" data-name="babies" data-label="Младенцы"></div>
+
+                    <div class="dropdown__buttons flex">
+                        <button type="button" class="action__btn remove__btn btn">Очистить</button>
+                        <button type="button" class="action__btn apply__btn btn">Применить</button>
+                    </div>
+
+                </div>
+            </div>
+            <button type="button" class="form__btn btn--fill btn">
+                Подобрать номер
+                <img src="icons/arrow.svg" alt="" class="arrow__btn">
+            </button>
+        </form>
+    </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"></script>
+<script src="datepicker.js"></script>
+<script src="dropdown.js"></script>
+<div class="footer">
+    <div class="footer__container container">
+
+        <div class="footer__logo">
+            <a href="./index.html" class="logo"><img src="./img/logo.svg" alt="logo"></a>
+            <p class="footer__text">Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные
+                взгляды»</p>
+        </div>
+
+        <div class="footer__menu">
+            <div class="footer__menu-column">
+                <p class="footer__title">Навигация</p>
+                <ul class="footer__menu-list">
+                    <li class="menu__item"><a href="./index.html" class="menu__link link">О нас</a></li>
+                    <li class="menu__item"><a href="./catalog.html" class="menu__link link">Каталог</a></li>
+                    <li class="menu__item"><a href="" class="menu__link link">Новости</a></li>
+                    <li class="menu__item"><a href="" class="menu__link link">Служба поддержки</a></li>
+                </ul>
+            </div>
+            <div class="footer__menu-column">
+                <p class="footer__title">О нас</p>
+                <ul class="footer__menu-list">
+                    <li class="menu__item"><a href="" class="menu__link link">О сервисе</a></li>
+                    <li class="menu__item"><a href="" class="menu__link link">Наша команда</a></li>
+                    <li class="menu__item"><a href="" class="menu__link link">Вакансии</a></li>
+                    <li class="menu__item"><a href="" class="menu__link link">Инвесторы</a></li>
+                </ul>
+            </div>
+            <div class="footer__menu-column">
+                <p class="footer__title">Служба поддержки</p>
+                <ul class="footer__menu-list">
+                    <li class="menu__item"><a href="./index.html" class="menu__link link">Соглашения</a></li>
+                    <li class="menu__item"><a href="./catalog.html" class="menu__link link">Сообщества</a></li>
+                    <li class="menu__item"><a href="" class="menu__link link">Связь с нами</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__subscription">
+            <p class="footer__title">Подписка</p>
+            <p class="footer__text">Получайте специальные предложения и новости сервиса</p>
+            <form class="footer__form">
+                <input type="email" placeholder="Email" class="input" name="email" required>
+                <button type="submit" class="input__btn btn">
+                    <img src="icons/arrow_purple.svg" alt="">
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="copyright__container container">
+            <p class="copyright__text">Copyright © 2018 Toxin отель. Все права защищены.</p>
+            <div class="socials">
+                <a href="" class="socials__item link">
+                    <img src="./icons/twitter_logo.png" alt="twitter">
+                </a>
+                <a href="" class="socials__item link">
+                    <img src="./icons/facebook_logo.png" alt="facebook">
+                </a>
+                <a href="" class="socials__item link">
+                    <img src="./icons/inst_logo.png" alt="instagram">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
